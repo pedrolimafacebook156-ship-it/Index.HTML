@@ -10,41 +10,13 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@400;700;900&display=swap');
-        
         body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; margin: 0; scroll-behavior: smooth; }
         .font-brand { font-family: 'Syncopate', sans-serif; }
-        
-        /* Efeito de Vidro */
-        .glass {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        /* Card de Produto */
-        .product-card {
-            background: #050505;
-            border: 1px solid #1a1a1a;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            border-radius: 8px;
-        }
-        .product-card:hover {
-            border-color: #fff;
-            transform: translateY(-8px);
-            box-shadow: 0 10px 40px rgba(255,255,255,0.05);
-        }
-
-        .btn-glow {
-            background: #fff;
-            color: #000;
-            font-weight: 900;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 20px rgba(255,255,255,0.2);
-        }
-        .btn-glow:hover {
-            box-shadow: 0 0 40px rgba(255,255,255,0.5);
-            transform: scale(1.02);
-        }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .product-card { background: #050505; border: 1px solid #1a1a1a; transition: all 0.4s ease; border-radius: 8px; overflow: hidden; }
+        .product-card:hover { border-color: #fff; transform: translateY(-8px); }
+        .btn-glow { background: #fff; color: #000; font-weight: 900; transition: all 0.3s ease; box-shadow: 0 0 20px rgba(255,255,255,0.2); }
+        .btn-glow:hover { box-shadow: 0 0 40px rgba(255,255,255,0.5); transform: scale(1.02); }
     </style>
 </head>
 <body>
@@ -53,17 +25,16 @@
         function App() {
             const whatsapp = "https://wa.me/5524992407940?text=E%20aí!%20Vi%20o%20catálogo%20da%20MP_Modas%20e%20gostaria%20de%20ver%20os%20modelos%20de%20Tênis%20e%20Camisas%20disponíveis.";
             
-            // NOVAS FOTOS DE CAMISAS ESTILO JOVEM/STREETWEAR
+            // IMAGENS DE ALTA CONFIABILIDADE (UNSPLASH) - FOCO TOTAL EM MODA MASCULINA JOVEM
             const products = [
-                { name: "TÊNIS MASCULINO", img: "https://images.unsplash.com/photo-1584000302558-ce0ba46d23f7?w=800&q=80", wa_text: "Quero%20saber%20o%20valor%20desse%20Tênis%20Masculino%20(Jordan)" },
-                { name: "CAMISA MASCULINA", img: "https://images.unsplash.com/photo-1578932724444-49a172719889?w=800&q=80", wa_text: "Quero%20saber%20o%20valor%20dessa%20Camisa%20Masculina%20Hype" }, // Nova Camisa Hype
-                { name: "TÊNIS MASCULINO", img: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=800&q=80", wa_text: "Quero%20saber%20o%20valor%20desse%20Tênis%20Masculino" },
-                { name: "CAMISA MASCULINA", img: "https://images.unsplash.com/photo-1576871333782-b8c17d33d59e?w=800&q=80", wa_text: "Quero%20saber%20o%20valor%20dessa%20Camisa%20Masculina%20Oversized" } // Nova Camisa Oversized
+                { name: "TÊNIS MASCULINO", img: "https://images.unsplash.com/photo-1597040966242-488c8a2ce69d?w=800&q=80", wa_text: "Quero%20ver%20esse%20Tênis%20Masculino%20(Jordan)" },
+                { name: "CAMISA MASCULINA", img: "https://images.unsplash.com/photo-1571945153237-4929e783ee4a?w=800&q=80", wa_text: "Quero%20ver%20essa%20Camisa%20Masculina" },
+                { name: "TÊNIS MASCULINO", img: "https://images.unsplash.com/photo-1605348532760-6753d2c41329?w=800&q=80", wa_text: "Quero%20ver%20esse%20Tênis%20Masculino" },
+                { name: "CAMISA MASCULINA", img: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&q=80", wa_text: "Quero%20ver%20essa%20Camisa%20Masculina" }
             ];
 
             return (
                 <div className="min-h-screen">
-                    {/* TOQUE MODERNO (HEADER) - MANTIDO IGUAL */}
                     <section id="hero" className="relative h-screen flex flex-col items-center justify-center text-center px-6 border-b border-zinc-900">
                         <div className="absolute top-10 flex flex-col items-center">
                             <div className="w-16 h-16 bg-white flex items-center justify-center mb-2 shadow-2xl">
@@ -72,18 +43,14 @@
                             <p className="text-[9px] tracking-[0.6em] uppercase opacity-50 font-bold">Petrópolis Edition</p>
                         </div>
 
-                        <div className="z-10 mt-16 md:mt-0">
+                        <div className="z-10">
                             <h1 className="font-brand text-5xl md:text-9xl mb-3 leading-none uppercase italic text-white tracking-tighter">MP_Modas</h1>
                             <div className="w-24 h-[2px] bg-white mx-auto mb-10 shadow-[0_0_10px_#fff]"></div>
-                            <p className="text-zinc-500 text-[11px] tracking-[0.5em] uppercase mb-16 font-bold">Premium Men's Streetwear Atelier</p>
+                            <p className="text-zinc-500 text-[11px] tracking-[0.5em] uppercase mb-16 font-bold italic">Men's Streetwear Atelier</p>
                             
                             <div className="flex flex-col gap-5 w-80 mx-auto">
-                                <a href={whatsapp} target="_blank" className="btn-glow py-5 text-[11px] uppercase tracking-[0.2em] text-center">
-                                    Chamar no WhatsApp
-                                </a>
-                                <a href="https://www.instagram.com/mp_modas2003/" target="_blank" className="glass py-5 text-[11px] font-black uppercase tracking-[0.3em] text-white hover:bg-white hover:text-black transition duration-500 text-center">
-                                    Siga @mp_modas2003
-                                </a>
+                                <a href={whatsapp} target="_blank" className="btn-glow py-5 text-[11px] uppercase tracking-[0.2em] text-center">Chamar no WhatsApp</a>
+                                <a href="https://www.instagram.com/mp_modas2003/" target="_blank" className="glass py-5 text-[11px] font-black uppercase tracking-[0.3em] text-white hover:bg-white hover:text-black transition duration-500 text-center">Siga @mp_modas2003</a>
                             </div>
                         </div>
 
@@ -93,18 +60,16 @@
                         </a>
                     </section>
 
-                    {/* CATÁLOGO DE PRODUTOS - COM NOVAS FOTOS */}
                     <main id="catalogo" className="max-w-7xl mx-auto px-6 py-32 text-center">
-                        <h2 className="font-brand text-2xl mb-16 uppercase italic underline decoration-zinc-800 underline-offset-8">Destaques da Semana</h2>
-                        
+                        <h2 className="font-brand text-2xl mb-16 uppercase italic underline decoration-zinc-800 underline-offset-8">Lançamentos Hype</h2>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
                             {products.map((p, i) => (
-                                <div key={i} className="product-card overflow-hidden">
-                                    <div className="aspect-square bg-zinc-900 border-b border-zinc-900">
+                                <div key={i} className="product-card">
+                                    <div className="aspect-square bg-zinc-900">
                                         <img src={p.img} alt={p.name} className="w-full h-full object-cover" />
                                     </div>
-                                    <div className="p-5 flex flex-col items-center">
-                                        <p className="text-[10px] font-black uppercase tracking-widest mb-6 text-white h-8 flex items-center">{p.name}</p>
+                                    <div className="p-5">
+                                        <p className="text-[10px] font-black uppercase tracking-widest mb-6 text-white h-8 flex items-center justify-center">{p.name}</p>
                                         <a href={`https://wa.me/5524992407940?text=E%20aí!%20${p.wa_text}`} target="_blank" className="inline-block w-full bg-white text-black py-3 text-[10px] font-black uppercase tracking-[0.1em] hover:bg-zinc-200">Consultar Valor</a>
                                     </div>
                                 </div>
@@ -112,8 +77,8 @@
                         </div>
                     </main>
 
-                    <footer className="py-24 border-t border-zinc-900 text-center">
-                        <p className="text-zinc-700 text-[9px] tracking-[0.8em] uppercase italic font-bold">MP_Modas • Petrópolis / Rio de Janeiro • © 2026</p>
+                    <footer className="py-24 border-t border-zinc-900 text-center text-zinc-700 text-[9px] tracking-[0.8em] uppercase italic font-bold">
+                        MP_Modas • Petrópolis / RJ • © 2026
                     </footer>
                 </div>
             );
