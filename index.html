@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MP MODAS | Premium Studio</title>
+    <title>MP MODAS | Catálogo Oficial</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@400;600;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@400;700;900&display=swap');
         body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; }
         .font-title { font-family: 'Syncopate', sans-serif; }
-        .product-card { border: 1px solid #1a1a1a; transition: all 0.3s ease; }
-        .product-card:hover { border-color: #fff; }
+        .product-card { border: 1px solid #1a1a1a; transition: all 0.3s ease; background-color: #050505; }
+        .product-card:hover { border-color: #fff; transform: scale(1.02); }
     </style>
 </head>
 <body>
@@ -24,53 +24,51 @@
                 <div className="w-14 h-14 bg-white flex items-center justify-center mb-2">
                     <span className="text-black font-black text-xl">MP</span>
                 </div>
-                <span className="text-[9px] font-bold tracking-[0.5em] uppercase text-white">Modas Petrópolis</span>
+                <span className="text-[10px] font-bold tracking-[0.5em] uppercase text-white">Modas Petrópolis</span>
             </div>
         );
 
         function App() {
-            const whatsapp = "https://wa.me/5524992407940?text=Olá!%20Vi%20o%20catálogo%20e%20quero%20saber%20mais.";
+            const whatsapp = "https://wa.me/5524992407940?text=Olá!%20Vi%20o%20catálogo%20da%20MP%20Modas%20e%20tenho%20interesse.";
             
+            // Produtos exatamente como você pediu
             const products = [
-                { cat: "CASACU / MOLETOM", name: "Moletom Nike Swoosh Heavy - Black", img: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&q=80" },
-                { cat: "TÊNIS / JORDAN", name: "Air Jordan 1 High 'Red/White'", img: "https://images.unsplash.com/photo-1584000302558-ce0ba46d23f7?w=600&q=80" },
-                { cat: "CASACU / PUFFER", name: "Jaqueta Puffer North Premium", img: "https://images.unsplash.com/photo-1544923246-77307dd654ca?w=600&q=80" },
-                { cat: "CAMISA / LUXO", name: "Jersey Elite Edition - Player Fit", img: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&q=80" },
-                { cat: "CASACU / CORTA-VENTO", name: "Windbreaker Nike Sport Color", img: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80" },
-                { cat: "TÊNIS / AIR MAX", name: "Nike Air Max 97 'Silver Bullet'", img: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=600&q=80" },
-                { cat: "MOLETOM / CONJUNTO", name: "Conjunto Moletom Tech Fleece", img: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=600&q=80" },
-                { cat: "TÊNIS / DUNK", name: "Nike Dunk Low 'Panda'", img: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600&q=80" }
+                { name: "CASACO DE MOLETOM", img: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&q=80" },
+                { name: "TÊNIS MASCULINO", img: "https://images.unsplash.com/photo-1584000302558-ce0ba46d23f7?w=800&q=80" },
+                { name: "CAMISA MASCULINA", img: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&q=80" },
+                { name: "CASACO DE MOLETOM", img: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&q=80" },
+                { name: "TÊNIS MASCULINO", img: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=800&q=80" },
+                { name: "CAMISA MASCULINA", img: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&q=80" },
+                { name: "CASACO DE MOLETOM", img: "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=800&q=80" },
+                { name: "TÊNIS MASCULINO", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80" }
             ];
 
             return (
                 <div className="min-h-screen">
-                    <nav className="fixed top-0 w-full bg-black/95 z-50 border-b border-zinc-900 py-4">
+                    <nav className="fixed top-0 w-full bg-black/95 z-50 border-b border-zinc-900 py-6">
                         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-                            <div className="w-10"></div>
+                            <div className="w-20"></div>
                             <Logo />
-                            <a href={whatsapp} target="_blank" className="text-[10px] font-bold border border-white px-4 py-2 hover:bg-white hover:text-black transition uppercase">WhatsApp</a>
+                            <a href={whatsapp} target="_blank" className="text-[10px] font-bold border border-white px-4 py-2 hover:bg-white hover:text-black transition uppercase tracking-widest">WhatsApp</a>
                         </div>
                     </nav>
 
-                    <header className="pt-48 pb-16 px-6 text-center">
-                        <h1 className="font-title text-4xl md:text-7xl mb-4 italic uppercase">CATÁLOGO 2026</h1>
-                        <p className="text-zinc-500 text-[10px] tracking-[0.4em] uppercase font-bold italic">Cores Reais • Qualidade Máxima</p>
+                    <header className="pt-52 pb-16 px-6 text-center">
+                        <h1 className="font-title text-3xl md:text-6xl mb-4 italic uppercase tracking-tighter">MP MODAS</h1>
+                        <p className="text-zinc-500 text-[10px] tracking-[0.4em] uppercase font-bold italic underline decoration-white underline-offset-8">Premium Collection 2026</p>
                     </header>
 
                     <main className="max-w-7xl mx-auto px-6 pb-32">
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
                             {products.map((p, i) => (
-                                <div key={i} className="product-card bg-zinc-950 flex flex-col group">
-                                    <div className="aspect-square overflow-hidden bg-zinc-900 border-b border-zinc-900 relative">
-                                        <img src={p.img} alt={p.name} className="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
-                                        <div className="absolute top-2 left-2 bg-black text-white text-[7px] font-black px-2 py-1 uppercase tracking-tighter border border-zinc-800">
-                                            {p.cat}
-                                        </div>
+                                <div key={i} className="product-card flex flex-col group overflow-hidden">
+                                    <div className="aspect-[4/5] overflow-hidden bg-zinc-900">
+                                        <img src={p.img} alt={p.name} className="w-full h-full object-cover transition duration-700 group-hover:scale-110" />
                                     </div>
-                                    <div className="p-4 flex flex-col flex-grow text-center">
-                                        <h3 className="text-[10px] font-bold uppercase tracking-tight text-zinc-300 mb-6 h-8 leading-tight">{p.name}</h3>
-                                        <a href={whatsapp} target="_blank" className="mt-auto block w-full bg-white text-black text-center py-2 text-[9px] font-black uppercase tracking-widest hover:bg-zinc-200 transition">
-                                            Falar com Consultor
+                                    <div className="p-4 flex flex-col items-center">
+                                        <h3 className="text-[10px] font-black uppercase tracking-widest text-white mb-6 text-center">{p.name}</h3>
+                                        <a href={whatsapp} target="_blank" className="w-full bg-white text-black text-center py-2 text-[9px] font-black uppercase tracking-widest hover:bg-zinc-200 transition">
+                                            PEDIR AGORA
                                         </a>
                                     </div>
                                 </div>
@@ -78,8 +76,8 @@
                         </div>
                     </main>
 
-                    <footer className="bg-black border-t border-zinc-900 py-16 text-center">
-                        <p className="text-zinc-600 text-[8px] tracking-[0.6em] uppercase italic">MP MODAS • PETRÓPOLIS / RJ</p>
+                    <footer className="bg-black border-t border-zinc-900 py-20 text-center">
+                        <p className="text-zinc-700 text-[9px] tracking-[0.6em] uppercase italic font-bold">MP MODAS • PETRÓPOLIS / RJ</p>
                     </footer>
                 </div>
             );
