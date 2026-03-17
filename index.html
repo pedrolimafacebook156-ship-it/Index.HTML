@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MP MODAS | Premium Studio</title>
+    <title>MP MODAS | Men's Elite Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
@@ -12,8 +12,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@400;700;900&display=swap');
         body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; }
         .font-title { font-family: 'Syncopate', sans-serif; }
-        .product-card { border: 1px solid #1a1a1a; transition: all 0.4s ease; background-color: #050505; }
-        .product-card:hover { border-color: #fff; transform: translateY(-5px); }
+        .product-card { border: 1px solid #1a1a1a; transition: all 0.4s ease; background-color: #050505; border-radius: 4px; }
+        .product-card:hover { border-color: #fff; transform: translateY(-8px); box-shadow: 0 10px 30px rgba(255,255,255,0.05); }
     </style>
 </head>
 <body>
@@ -21,7 +21,7 @@
     <script type="text/babel">
         const Logo = () => (
             <div className="flex flex-col items-center">
-                <div className="w-14 h-14 bg-white flex items-center justify-center mb-2 shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                <div className="w-14 h-14 bg-white flex items-center justify-center mb-2 shadow-[0_0_20px_rgba(255,255,255,0.2)]">
                     <span className="text-black font-black text-xl">MP</span>
                 </div>
                 <span className="text-[10px] font-bold tracking-[0.5em] uppercase text-white">Modas Petrópolis</span>
@@ -29,45 +29,45 @@
         );
 
         function App() {
-            const whatsapp = "https://wa.me/5524992407940?text=Olá!%20Vi%20o%20catálogo%20da%20MP%20Modas%20e%20tenho%20interesse.";
+            const whatsapp = "https://wa.me/5524992407940?text=E aí! Vi o catálogo e quero garantir uma peça.";
             
             const products = [
-                { name: "CASACO DE MOLETOM", img: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&q=80" },
-                { name: "TÊNIS MASCULINO", img: "https://images.unsplash.com/photo-1584000302558-ce0ba46d23f7?w=800&q=80" },
-                { name: "CAMISA MASCULINA", img: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&q=80" },
+                { name: "CASACO DE MOLETOM", img: "https://images.unsplash.com/photo-1578932724444-49a172719889?w=800&q=80" },
+                { name: "TÊNIS MASCULINO", img: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=800&q=80" },
+                { name: "CAMISA MASCULINA", img: "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=800&q=80" },
                 { name: "CASACO DE MOLETOM", img: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&q=80" },
                 { name: "TÊNIS MASCULINO", img: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=800&q=80" },
-                { name: "CAMISA MASCULINA", img: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&q=80" },
-                { name: "CASACO DE MOLETOM", img: "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=800&q=80" },
-                { name: "CAMISA MASCULINA", img: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800&q=80" }
+                { name: "CAMISA MASCULINA", img: "https://images.unsplash.com/photo-1618354691792-d1d42acfd860?w=800&q=80" },
+                { name: "CASACO DE MOLETOM", img: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&q=80" },
+                { name: "CAMISA MASCULINA", img: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&q=80" }
             ];
 
             return (
                 <div className="min-h-screen">
-                    <nav className="fixed top-0 w-full bg-black/95 z-50 border-b border-zinc-900 py-6 backdrop-blur-sm">
+                    <nav className="fixed top-0 w-full bg-black/95 z-50 border-b border-zinc-900 py-6 backdrop-blur-md">
                         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-                            <div className="w-20 hidden md:block"></div>
+                            <div className="w-20 hidden md:block text-[8px] font-bold tracking-widest text-zinc-600">NEW ERA</div>
                             <Logo />
-                            <a href={whatsapp} target="_blank" className="text-[10px] font-bold border border-white px-4 py-2 hover:bg-white hover:text-black transition uppercase tracking-widest">Contato</a>
+                            <a href={whatsapp} target="_blank" className="text-[10px] font-black border border-white px-5 py-2 hover:bg-white hover:text-black transition uppercase tracking-[0.2em]">WhatsApp</a>
                         </div>
                     </nav>
 
                     <header className="pt-52 pb-16 px-6 text-center">
-                        <h1 className="font-title text-3xl md:text-6xl mb-4 italic uppercase tracking-tighter">MP MODAS</h1>
-                        <p className="text-zinc-500 text-[10px] tracking-[0.4em] uppercase font-bold italic underline decoration-white underline-offset-8">Men's Style • Petrópolis</p>
+                        <h1 className="font-title text-3xl md:text-7xl mb-4 italic uppercase tracking-tighter">MP MODAS</h1>
+                        <p className="text-zinc-500 text-[10px] tracking-[0.4em] uppercase font-bold italic border-t border-zinc-900 pt-4 inline-block">Men's Hype Wear</p>
                     </header>
 
                     <main className="max-w-7xl mx-auto px-6 pb-32">
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
                             {products.map((p, i) => (
-                                <div key={i} className="product-card flex flex-col group overflow-hidden">
-                                    <div className="aspect-[4/5] overflow-hidden bg-zinc-900">
+                                <div key={i} className="product-card flex flex-col group overflow-hidden shadow-2xl">
+                                    <div className="aspect-[4/5] overflow-hidden bg-zinc-900 border-b border-zinc-900">
                                         <img src={p.img} alt={p.name} className="w-full h-full object-cover transition duration-700 group-hover:scale-110" />
                                     </div>
-                                    <div className="p-4 flex flex-col items-center">
+                                    <div className="p-5 flex flex-col items-center">
                                         <h3 className="text-[10px] font-black uppercase tracking-widest text-white mb-6 text-center">{p.name}</h3>
                                         <a href={whatsapp} target="_blank" className="w-full bg-white text-black text-center py-2 text-[9px] font-black uppercase tracking-widest hover:bg-zinc-200 transition">
-                                            QUERO ESTE
+                                            GARANTIR AGORA
                                         </a>
                                     </div>
                                 </div>
@@ -76,7 +76,8 @@
                     </main>
 
                     <footer className="bg-black border-t border-zinc-900 py-20 text-center">
-                        <p className="text-zinc-700 text-[9px] tracking-[0.6em] uppercase italic font-bold">MP MODAS • EXCLUSIVIDADE MASCULINA</p>
+                        <p className="text-zinc-700 text-[9px] tracking-[0.6em] uppercase italic font-bold mb-2">MP MODAS • PETRÓPOLIS / RJ</p>
+                        <p className="text-zinc-800 text-[8px] tracking-[0.2em]">QUALIDADE PREMIUM EM CADA PEÇA</p>
                     </footer>
                 </div>
             );
