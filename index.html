@@ -1,121 +1,96 @@
-<!DOCTYPE html>
+              <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MP MODAS | New Collection</title>
+    <title>MP MODAS | Premium Streetwear</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;700;900&display=swap');
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .font-logo { font-family: 'Archivo Black', sans-serif; }
     </style>
 </head>
 <body>
     <div id="root"></div>
     <script type="text/babel">
-        const Logo = ({ light = false }) => (
-            <div className="flex items-center gap-3 group">
-                <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="48" stroke={light ? "white" : "black"} strokeWidth="4"/>
-                    <path d="M25 65V35L40 50L55 35V65" stroke={light ? "white" : "black"} strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M65 35H75C80 35 83 38 83 42.5C83 47 80 50 75 50H65V65" stroke={light ? "white" : "black"} strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                <div className="flex flex-col text-left">
-                    <span className={`text-xl font-black tracking-tighter leading-none ${light ? "text-white" : "text-black"}`}>MP MODAS</span>
-                    <span className={`text-[9px] uppercase tracking-[0.3em] ${light ? "text-zinc-500" : "text-zinc-400"}`}>Premium Wear</span>
-                </div>
+        const Logo = () => (
+            <div className="flex flex-col items-center">
+                <img src="https://i.ibb.co/m5Z4Xf8Q/115323.png" alt="MP MODAS LOGO" className="w-16 h-16 object-contain" />
+                <span className="font-logo text-xs tracking-[0.2em] mt-1 text-black">MP MODAS</span>
             </div>
         );
 
         function App() {
-            const whatsapp = "https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Quero%20fazer%20um%20pedido.";
+            const whatsapp = "https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Vi%20o%20catálogo%20e%20tenho%20interesse.";
             
             const products = [
-                { name: "Camisa Flamengo 24/25", price: "R$ 149,90", tag: "Novo", image: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=800&q=80" },
-                { name: "Tênis Nike Jordan Red", price: "R$ 349,90", tag: "Fogo", image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80" },
-                { name: "Seleção Brasil Amarela", price: "R$ 159,90", tag: "Elite", image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80" },
-                { name: "Corta Vento Oakley", price: "R$ 199,90", tag: "Inverno", image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=800&q=80" },
-                { name: "Camisa Real Madrid Blue", price: "R$ 169,90", tag: "Importada", image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80" },
-                { name: "Tênis Casual Classic", price: "R$ 259,90", tag: "Top", image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=800&q=80" },
-                { name: "Conjunto Moletom Tech", price: "R$ 289,90", tag: "Promo", image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80" },
-                { name: "Boné New Era Premium", price: "R$ 89,90", tag: "Style", image: "https://images.unsplash.com/photo-1588850567047-1845a9eecec3?auto=format&fit=crop&w=800&q=80" },
-                { name: "Camisa Inter Miami", price: "R$ 149,90", tag: "Messi", image: "https://images.unsplash.com/photo-1511746015097-d770ee397ff2?auto=format&fit=crop&w=800&q=80" },
-                { name: "Tênis Sport Blue", price: "R$ 219,90", tag: "Novo", image: "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=800&q=80" },
-                { name: "Calça Cargo Premium", price: "R$ 179,90", tag: "Tendência", image: "https://images.unsplash.com/photo-1624372333417-640348db4956?auto=format&fit=crop&w=800&q=80" },
-                { name: "Relógio Digital Sport", price: "R$ 129,90", tag: "Luxo", image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80" }
+                { name: "Camisa Flamengo 24/25 - Home", price: "R$ 139,90", tag: "Campeão", image: "https://images.unsplash.com/photo-1620311210427-046645398695?w=800" },
+                { name: "Camisa São Paulo 24 - New Balance", price: "R$ 149,90", tag: "Tricolor", image: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800" },
+                { name: "Nike Dunk Low Panda", price: "R$ 329,90", tag: "Hype", image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=800" },
+                { name: "Camisa Palmeiras - Puma Gold", price: "R$ 139,90", tag: "Exclusiva", image: "https://images.unsplash.com/photo-1551958219-acbc608c6377?w=800" },
+                { name: "Nike Air Jordan 1 High", price: "R$ 389,90", tag: "Lenda", image: "https://images.unsplash.com/photo-1584000302558-ce0ba46d23f7?w=800" },
+                { name: "Camisa Corinthians 24 - Black", price: "R$ 139,90", tag: "Fiel", image: "https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800" },
+                { name: "Oakley Flak 1.0 - White", price: "R$ 249,90", tag: "Street", image: "https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=800" },
+                { name: "Conjunto Corta-Vento Nike", price: "R$ 199,90", tag: "Inverno", image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800" },
             ];
 
             return (
                 <div className="bg-white min-h-screen">
-                    <header className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-zinc-100 h-20 flex items-center">
-                        <div className="max-w-7xl mx-auto px-6 w-full flex justify-between items-center">
+                    {/* Header com seu Logo */}
+                    <header className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-zinc-100 py-2">
+                        <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
                             <Logo />
-                            <a href={whatsapp} target="_blank" className="bg-black text-white px-5 py-2 rounded-full font-bold text-xs uppercase tracking-widest hover:scale-105 transition active:scale-95">WhatsApp</a>
+                            <a href={whatsapp} target="_blank" className="bg-black text-white px-6 py-2 rounded-full font-bold text-[10px] uppercase tracking-widest hover:scale-105 transition">Comprar</a>
                         </div>
                     </header>
 
-                    <section className="pt-40 pb-20 px-6 max-w-7xl mx-auto text-left">
-                        <div className="grid md:grid-cols-2 gap-12 items-center">
-                            <div>
-                                <span className="bg-black text-white text-[10px] font-black px-3 py-1 uppercase tracking-widest mb-4 inline-block">Nova Temporada 2026</span>
-                                <h1 className="text-6xl md:text-8xl font-black uppercase leading-[0.9] tracking-tighter mb-6">COLOR<br/><span className="text-zinc-200">DROP.</span></h1>
-                                <p className="text-zinc-500 text-lg mb-8 max-w-md">Sua loja premium em Petrópolis. Estilo, cor e qualidade em cada detalhe.</p>
-                                <a href="#produtos" className="inline-block bg-black text-white px-10 py-5 font-bold uppercase text-xs tracking-[.2em] hover:bg-zinc-800 transition">Explorar Catálogo</a>
-                            </div>
-                            <div className="relative">
-                                <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=800" className="rounded-sm shadow-2xl w-full h-[500px] object-cover" />
-                                <div className="absolute -bottom-6 -left-6 bg-white p-6 shadow-xl hidden md:block border border-zinc-100">
-                                    <p className="font-black text-2xl uppercase tracking-tighter">MP MODAS</p>
-                                    <p className="text-[10px] text-zinc-400 font-bold uppercase tracking-widest leading-none">Original Brand</p>
-                                </div>
+                    {/* Banner Principal */}
+                    <section className="pt-40 pb-20 px-6 max-w-7xl mx-auto flex flex-col items-center text-center">
+                        <h1 className="text-5xl md:text-8xl font-black uppercase leading-none tracking-tighter mb-4 text-black italic">
+                            TEMPORADA<br/><span className="text-zinc-200 uppercase">2026</span>
+                        </h1>
+                        <p className="text-zinc-500 text-sm md:text-lg mb-8 max-w-lg font-bold">As melhores camisas de time e os tênis mais brabos do RJ.</p>
+                        <div className="w-full h-[400px] bg-zinc-100 rounded-lg overflow-hidden relative shadow-2xl border-4 border-black">
+                            <img src="https://images.unsplash.com/photo-1511746015097-d770ee397ff2?w=1200" className="w-full h-full object-cover" />
+                            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                                <p className="text-white font-black text-4xl uppercase tracking-widest border-2 border-white px-6 py-2">MP MODAS</p>
                             </div>
                         </div>
                     </section>
 
-                    <section id="produtos" className="max-w-7xl mx-auto px-6 py-20">
-                        <div className="flex justify-between items-end mb-16 border-b border-zinc-100 pb-8">
-                            <h2 className="text-4xl font-black uppercase tracking-tighter">Vitrine Premium</h2>
-                            <span className="text-zinc-400 text-xs font-bold uppercase tracking-[0.3em] mb-1">/ {products.length} Itens</span>
-                        </div>
-                        
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-12">
+                    {/* Vitrine de Produtos */}
+                    <section id="produtos" className="max-w-7xl mx-auto px-6 py-10">
+                        <h2 className="text-2xl font-black uppercase mb-10 border-l-8 border-black pl-4">Destaques da Semana</h2>
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
                             {products.map((p, i) => (
-                                <div key={i} className="group flex flex-col h-full">
-                                    <div className="aspect-[3/4] overflow-hidden bg-zinc-50 mb-5 relative rounded-sm">
-                                        <div className="absolute top-3 left-3 z-10 bg-white px-2 py-1 text-[9px] font-black uppercase tracking-widest border border-zinc-100 shadow-sm">{p.tag}</div>
-                                        <img src={p.image} className="w-full h-full object-cover group-hover:scale-110 transition duration-700 ease-in-out" />
-                                        <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition duration-300"></div>
+                                <div key={i} className="group border border-zinc-100 p-2 rounded-lg shadow-sm hover:shadow-xl transition">
+                                    <div className="aspect-square overflow-hidden bg-zinc-100 relative rounded-md mb-4">
+                                        <div className="absolute top-2 left-2 z-10 bg-black text-white text-[8px] font-black px-2 py-1 rounded-sm uppercase tracking-tighter">
+                                            {p.tag}
+                                        </div>
+                                        <img src={p.image} className="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
                                     </div>
-                                    <div className="flex flex-col flex-grow">
-                                        <h3 className="font-bold uppercase text-[11px] tracking-wider text-zinc-800 mb-1">{p.name}</h3>
-                                        <p className="font-black text-base text-black mb-4">{p.price}</p>
-                                        <a href={whatsapp} target="_blank" className="mt-auto block bg-zinc-50 border border-zinc-200 text-center py-3 text-[10px] font-black uppercase tracking-[0.2em] hover:bg-black hover:text-white hover:border-black transition duration-300">
-                                            Comprar via WhatsApp
-                                        </a>
-                                    </div>
+                                    <h3 className="font-bold text-[11px] md:text-xs uppercase tracking-tight text-zinc-900 line-clamp-1">{p.name}</h3>
+                                    <p className="font-black text-sm text-black mb-3 italic underline">{p.price}</p>
+                                    <a href={whatsapp} target="_blank" className="block w-full bg-black text-white text-center py-2 text-[10px] font-black uppercase tracking-widest hover:bg-zinc-800 rounded">
+                                        Pedir Agora
+                                    </a>
                                 </div>
                             ))}
                         </div>
                     </section>
 
-                    <footer className="bg-black text-white pt-32 pb-12 px-6">
-                        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left border-b border-zinc-800 pb-20 mb-12">
-                            <Logo light={true} />
-                            <div className="flex gap-12">
-                                <div>
-                                    <p className="text-zinc-500 text-[10px] uppercase font-black tracking-widest mb-4">Contato</p>
-                                    <p className="text-sm font-bold tracking-tight">(24) 99240-7940</p>
-                                </div>
-                                <div>
-                                    <p className="text-zinc-500 text-[10px] uppercase font-black tracking-widest mb-4">Localização</p>
-                                    <p className="text-sm font-bold tracking-tight">Petrópolis, RJ</p>
-                                </div>
-                            </div>
+                    {/* Rodapé */}
+                    <footer className="bg-black text-white mt-20 py-16 px-6 text-center">
+                        <div className="mb-6 opacity-80 contrast-200 brightness-200">
+                             <img src="https://i.ibb.co/m5Z4Xf8Q/115323.png" alt="MP MODAS LOGO" className="w-16 h-16 mx-auto object-contain grayscale invert" />
                         </div>
-                        <p className="text-zinc-700 text-[10px] uppercase tracking-[.4em] text-center">© 2026 MP MODAS - QUALIDADE ACIMA DE TUDO</p>
+                        <p className="text-zinc-500 text-[10px] font-bold uppercase tracking-[0.5em]">MP MODAS - Estilo e Qualidade em Petrópolis</p>
+                        <p className="text-zinc-700 text-[9px] mt-4 uppercase">© 2026 Todos os direitos reservados</p>
                     </footer>
                 </div>
             );
@@ -126,4 +101,4 @@
     </script>
 </body>
 </html>
-
+                          
