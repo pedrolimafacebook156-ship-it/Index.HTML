@@ -3,44 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MP MODAS | Experience</title>
+    <title>MP_MODAS2003 | Official Experience</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@400;900&display=swap');
         
         body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; font-family: 'Inter', sans-serif; background: #000; }
         
+        /* VÍDEO DE FUNDO ESTILO GRIFE */
         .video-background {
             position: fixed;
             right: 0; bottom: 0;
             min-width: 100%; min-height: 100%;
             width: auto; height: auto;
             z-index: -100;
-            filter: brightness(0.4) contrast(1.2);
+            filter: brightness(0.3) contrast(1.1);
             object-fit: cover;
         }
 
-        .glass-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .font-title { font-family: 'Syncopate', sans-serif; text-transform: uppercase; letter-spacing: -2px; }
+        .font-brand { font-family: 'Syncopate', sans-serif; letter-spacing: -1px; }
         
-        .btn-premium {
+        .btn-main {
             background: #fff;
             color: #000;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
 
-        .btn-premium:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(255,255,255,0.4);
+        .btn-main:hover {
+            transform: scale(1.05) translateY(-3px);
+            box-shadow: 0 15px 30px rgba(255,255,255,0.2);
+        }
+
+        .glow-text {
+            text-shadow: 0 0 20px rgba(255,255,255,0.5);
         }
     </style>
 </head>
@@ -50,31 +55,33 @@
         <source src="https://cdn.pixabay.com/video/2021/04/12/70817-537463690_tiny.mp4" type="video/mp4">
     </video>
 
-    <div class="relative z-10 h-screen flex flex-col items-center justify-between py-12 px-6">
+    <div class="relative z-10 h-screen flex flex-col items-center justify-between py-16 px-6 text-center">
         
-        <div className="flex flex-col items-center">
-            <div class="w-20 h-20 bg-white flex items-center justify-center mb-4 shadow-2xl">
-                <span class="text-black font-black text-3xl">MP</span>
+        <div class="flex flex-col items-center">
+            <div class="w-16 h-16 bg-white flex items-center justify-center mb-4 rotate-3 shadow-[0_0_30px_rgba(255,255,255,0.3)]">
+                <span class="text-black font-black text-2xl tracking-tighter">MP</span>
             </div>
-            <p class="text-white text-[10px] tracking-[0.8em] uppercase font-bold">Modas Atelier</p>
+            <h2 class="text-white text-[9px] tracking-[0.6em] font-black uppercase opacity-60">Estilo & Atitude</h2>
         </div>
 
-        <div class="text-center">
-            <h1 class="font-title text-5xl md:text-8xl text-white mb-2 leading-none">NEW<br>DROP</h1>
-            <p class="text-zinc-400 text-xs uppercase tracking-[0.3em] mb-8 italic font-bold">Coleção Masculina 2026</p>
+        <div>
+            <h1 class="font-brand text-4xl md:text-7xl text-white mb-2 leading-none glow-text">MP_MODAS2003</h1>
+            <div class="w-12 h-1 bg-white mx-auto mb-8"></div>
+            <p class="text-zinc-300 text-xs uppercase tracking-[0.4em] mb-12 font-medium">New Men's Drop • 2026</p>
             
-            <div class="flex flex-col gap-4 w-64 mx-auto">
-                <a href="https://wa.me/5524992407940" target="_blank" class="btn-premium py-4 px-8 text-[11px] rounded-sm text-center">
-                    Ver Catálogo WhatsApp
+            <div class="flex flex-col gap-5 w-72 mx-auto">
+                <a href="https://wa.me/5524992407940" target="_blank" class="btn-main py-5 px-8 text-[10px] rounded-none">
+                    Falar no WhatsApp
                 </a>
-                <a href="#" target="_blank" class="glass-card text-white py-4 px-8 text-[11px] font-bold uppercase tracking-widest rounded-sm text-center">
+                <a href="https://instagram.com/mp_modas2003" target="_blank" class="glass-effect text-white py-5 px-8 text-[10px] font-black uppercase tracking-[0.3em] rounded-none hover:bg-white hover:text-black transition duration-500">
                     Instagram Oficial
                 </a>
             </div>
         </div>
 
-        <div class="text-center">
-            <p class="text-white/30 text-[9px] uppercase tracking-[0.5em]">Petrópolis • Rio de Janeiro</p>
+        <div class="space-y-2">
+            <p class="text-white/40 text-[8px] uppercase tracking-[0.6em] font-bold">Premium Streetwear Boutique</p>
+            <p class="text-white/20 text-[7px] uppercase tracking-[0.2em]">Petrópolis, Rio de Janeiro</p>
         </div>
 
     </div>
