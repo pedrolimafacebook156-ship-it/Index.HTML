@@ -53,15 +53,17 @@
         function App() {
             const whatsapp = "https://wa.me/5524992407940?text=E%20aí!%20Vi%20o%20catálogo%20da%20MP_Modas%20e%20gostaria%20de%20ver%20os%20modelos%20de%20Tênis%20e%20Camisas%20disponíveis.";
             
+            // NOVAS FOTOS DE CAMISAS ESTILO JOVEM/STREETWEAR
             const products = [
                 { name: "TÊNIS MASCULINO", img: "https://images.unsplash.com/photo-1584000302558-ce0ba46d23f7?w=800&q=80", wa_text: "Quero%20saber%20o%20valor%20desse%20Tênis%20Masculino%20(Jordan)" },
-                { name: "CAMISA MASCULINA", img: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&q=80", wa_text: "Quero%20saber%20o%20valor%20dessa%20Camisa%20Masculina" },
+                { name: "CAMISA MASCULINA", img: "https://images.unsplash.com/photo-1578932724444-49a172719889?w=800&q=80", wa_text: "Quero%20saber%20o%20valor%20dessa%20Camisa%20Masculina%20Hype" }, // Nova Camisa Hype
                 { name: "TÊNIS MASCULINO", img: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=800&q=80", wa_text: "Quero%20saber%20o%20valor%20desse%20Tênis%20Masculino" },
-                { name: "CAMISA MASCULINA", img: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&q=80", wa_text: "Quero%20saber%20o%20valor%20dessa%20Camisa%20Masculina" } // Imagem que carrega sempre
+                { name: "CAMISA MASCULINA", img: "https://images.unsplash.com/photo-1576871333782-b8c17d33d59e?w=800&q=80", wa_text: "Quero%20saber%20o%20valor%20dessa%20Camisa%20Masculina%20Oversized" } // Nova Camisa Oversized
             ];
 
             return (
                 <div className="min-h-screen">
+                    {/* TOQUE MODERNO (HEADER) - MANTIDO IGUAL */}
                     <section id="hero" className="relative h-screen flex flex-col items-center justify-center text-center px-6 border-b border-zinc-900">
                         <div className="absolute top-10 flex flex-col items-center">
                             <div className="w-16 h-16 bg-white flex items-center justify-center mb-2 shadow-2xl">
@@ -91,6 +93,7 @@
                         </a>
                     </section>
 
+                    {/* CATÁLOGO DE PRODUTOS - COM NOVAS FOTOS */}
                     <main id="catalogo" className="max-w-7xl mx-auto px-6 py-32 text-center">
                         <h2 className="font-brand text-2xl mb-16 uppercase italic underline decoration-zinc-800 underline-offset-8">Destaques da Semana</h2>
                         
