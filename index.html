@@ -9,12 +9,11 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;600;900&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; overflow-x: hidden; }
+        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@400;600;900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; }
         .font-title { font-family: 'Syncopate', sans-serif; }
-        .product-card { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid #111; }
-        .product-card:hover { border-color: #fff; transform: translateY(-10px); }
-        .glitch-text { text-shadow: 2px 0 #ff0000, -2px 0 #00ff00; }
+        .product-card { border: 1px solid #1a1a1a; transition: all 0.3s ease; }
+        .product-card:hover { border-color: #fff; }
     </style>
 </head>
 <body>
@@ -22,64 +21,56 @@
     <script type="text/babel">
         const Logo = () => (
             <div className="flex flex-col items-center">
-                <div className="w-16 h-16 bg-white flex items-center justify-center rounded-none mb-2 shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)]">
-                    <span className="text-black font-black text-2xl tracking-tighter">MP</span>
+                <div className="w-14 h-14 bg-white flex items-center justify-center mb-2">
+                    <span className="text-black font-black text-xl">MP</span>
                 </div>
-                <span className="text-[10px] font-bold tracking-[0.6em] uppercase text-white">Modas Atelier</span>
+                <span className="text-[9px] font-bold tracking-[0.5em] uppercase text-white">Modas Petrópolis</span>
             </div>
         );
 
         function App() {
-            const whatsapp = "https://wa.me/5524992407940?text=Vim%20pelo%20site!%20Tenho%20interesse%20em%20peças%20Premium.";
+            const whatsapp = "https://wa.me/5524992407940?text=Olá!%20Vi%20o%20catálogo%20e%20quero%20saber%20mais.";
             
-            const catalog = [
-                { cat: "CASACU / HYPE", name: "Corta-Vento Nike Tech Reflective", img: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&q=80" },
-                { cat: "TÊNIS / JORDAN", name: "Air Jordan 1 Retro 'High OG'", img: "https://images.unsplash.com/photo-1597041066858-1320499092d0?w=800&q=80" },
-                { cat: "CAMISA / LUXO", name: "Jersey Premium Black Edition", img: "https://images.unsplash.com/photo-1562157873-818bc0726f68?w=800&q=80" },
-                { cat: "TÊNIS / AIR MAX", name: "Nike Air Max 97 'Silver Bullet'", img: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800&q=80" },
-                { cat: "CASACU / WINTER", name: "Puffer Jacket North Series", img: "https://images.unsplash.com/photo-1544923246-77307dd654ca?w=800&q=80" },
-                { cat: "CAMISA / STREET", name: "Oversized Heavy Cotton 'MP'", img: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=800&q=80" },
-                { cat: "TÊNIS / CASUAL", name: "Adidas Forum Low Exhibit", img: "https://images.unsplash.com/photo-1552346154-21d32810aba3?w=800&q=80" },
-                { cat: "ACESSÓRIO", name: "Shoulder Bag Street Black", img: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80" }
+            const products = [
+                { cat: "CASACU / MOLETOM", name: "Moletom Nike Swoosh Heavy - Black", img: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&q=80" },
+                { cat: "TÊNIS / JORDAN", name: "Air Jordan 1 High 'Red/White'", img: "https://images.unsplash.com/photo-1584000302558-ce0ba46d23f7?w=600&q=80" },
+                { cat: "CASACU / PUFFER", name: "Jaqueta Puffer North Premium", img: "https://images.unsplash.com/photo-1544923246-77307dd654ca?w=600&q=80" },
+                { cat: "CAMISA / LUXO", name: "Jersey Elite Edition - Player Fit", img: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&q=80" },
+                { cat: "CASACU / CORTA-VENTO", name: "Windbreaker Nike Sport Color", img: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80" },
+                { cat: "TÊNIS / AIR MAX", name: "Nike Air Max 97 'Silver Bullet'", img: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=600&q=80" },
+                { cat: "MOLETOM / CONJUNTO", name: "Conjunto Moletom Tech Fleece", img: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=600&q=80" },
+                { cat: "TÊNIS / DUNK", name: "Nike Dunk Low 'Panda'", img: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600&q=80" }
             ];
 
             return (
                 <div className="min-h-screen">
-                    {/* NAVBAR DARK LUXURY */}
-                    <nav className="fixed top-0 w-full bg-black/90 backdrop-blur-md z-50 border-b border-zinc-800 py-6">
+                    <nav className="fixed top-0 w-full bg-black/95 z-50 border-b border-zinc-900 py-4">
                         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-                            <div className="flex items-center gap-4">
-                                <div className="w-8 h-8 bg-white flex items-center justify-center">
-                                    <span className="text-black text-[10px] font-black underline">MP</span>
-                                </div>
-                            </div>
+                            <div className="w-10"></div>
                             <Logo />
-                            <a href={whatsapp} className="text-[10px] font-black border border-white px-4 py-2 hover:bg-white hover:text-black transition uppercase tracking-widest">Contato</a>
+                            <a href={whatsapp} target="_blank" className="text-[10px] font-bold border border-white px-4 py-2 hover:bg-white hover:text-black transition uppercase">WhatsApp</a>
                         </div>
                     </nav>
 
-                    {/* HERO SECTION - CHAMA ATENÇÃO */}
-                    <header className="pt-56 pb-20 px-6 text-center">
-                        <h2 className="text-[10px] font-black tracking-[0.8em] text-zinc-500 uppercase mb-6 italic">Petrópolis Heavy Streetwear</h2>
-                        <h1 className="font-title text-5xl md:text-8xl tracking-tighter mb-10 leading-none italic uppercase">
-                            NOVA<br/><span className="text-zinc-800 outline-text">ERA.</span>
-                        </h1>
-                        <div className="w-full h-[1px] bg-zinc-800 max-w-xs mx-auto mb-10"></div>
+                    <header className="pt-48 pb-16 px-6 text-center">
+                        <h1 className="font-title text-4xl md:text-7xl mb-4 italic uppercase">CATÁLOGO 2026</h1>
+                        <p className="text-zinc-500 text-[10px] tracking-[0.4em] uppercase font-bold italic">Cores Reais • Qualidade Máxima</p>
                     </header>
 
-                    {/* CATALOGO DINAMICO */}
-                    <main className="max-w-7xl mx-auto px-6 pb-40">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            {catalog.map((item, i) => (
-                                <div key={i} className="product-card bg-zinc-950 p-3 group">
-                                    <div className="aspect-square overflow-hidden mb-6 bg-zinc-900 grayscale group-hover:grayscale-0 transition-all duration-700">
-                                        <img src={item.img} alt={item.name} className="w-full h-full object-cover group-hover:scale-110 transition duration-700" />
+                    <main className="max-w-7xl mx-auto px-6 pb-32">
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                            {products.map((p, i) => (
+                                <div key={i} className="product-card bg-zinc-950 flex flex-col group">
+                                    <div className="aspect-square overflow-hidden bg-zinc-900 border-b border-zinc-900 relative">
+                                        <img src={p.img} alt={p.name} className="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+                                        <div className="absolute top-2 left-2 bg-black text-white text-[7px] font-black px-2 py-1 uppercase tracking-tighter border border-zinc-800">
+                                            {p.cat}
+                                        </div>
                                     </div>
-                                    <div className="flex flex-col">
-                                        <span className="text-[8px] font-black tracking-widest text-zinc-600 uppercase mb-1 underline decoration-zinc-800 underline-offset-4">{item.cat}</span>
-                                        <h3 className="text-[11px] font-bold uppercase tracking-tight text-white mb-6 h-10 leading-tight">{item.name}</h3>
-                                        <a href={whatsapp} target="_blank" className="bg-white text-black text-center py-3 text-[9px] font-black uppercase tracking-widest hover:bg-zinc-200 transition">
-                                            RESERVAR PEÇA
+                                    <div className="p-4 flex flex-col flex-grow text-center">
+                                        <h3 className="text-[10px] font-bold uppercase tracking-tight text-zinc-300 mb-6 h-8 leading-tight">{p.name}</h3>
+                                        <a href={whatsapp} target="_blank" className="mt-auto block w-full bg-white text-black text-center py-2 text-[9px] font-black uppercase tracking-widest hover:bg-zinc-200 transition">
+                                            Falar com Consultor
                                         </a>
                                     </div>
                                 </div>
@@ -87,10 +78,8 @@
                         </div>
                     </main>
 
-                    {/* FOOTER */}
-                    <footer className="bg-zinc-950 border-t border-zinc-900 py-20 px-6 text-center">
-                        <p className="text-zinc-700 text-[9px] font-bold tracking-[0.8em] uppercase mb-4 italic">MP MODAS • EXCLUSIVIDADE ABSOLUTA</p>
-                        <p className="text-zinc-800 text-[8px] uppercase">© 2026 Crafted in Petrópolis</p>
+                    <footer className="bg-black border-t border-zinc-900 py-16 text-center">
+                        <p className="text-zinc-600 text-[8px] tracking-[0.6em] uppercase italic">MP MODAS • PETRÓPOLIS / RJ</p>
                     </footer>
                 </div>
             );
