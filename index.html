@@ -3,70 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MP MODAS | Premium Streetwear</title>
+    <title>MP MODAS | Premium Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;700;900&display=swap');
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: #ffffff; }
-        .font-logo { font-family: 'Archivo Black', sans-serif; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #000; }
+        .product-card img { transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+        .product-card:hover img { transform: scale(1.05); }
     </style>
 </head>
 <body>
     <div id="root"></div>
     <script type="text/babel">
         const Logo = () => (
-            <div className="flex flex-col items-center">
-                {/* Logo principal buscando do seu repositório */}
-                <img src="115323.png" alt="MP MODAS LOGO" className="w-20 h-20 object-contain" onError={(e) => {e.target.src="https://via.placeholder.com/150?text=MP+MODAS"}} />
-                <span className="font-logo text-[10px] tracking-[0.3em] mt-2 text-black uppercase">Qualidade Premium</span>
+            <div className="flex flex-col items-center py-6">
+                <img src="115323.png" alt="MP MODAS" className="w-24 h-24 object-contain mb-2" />
+                <h1 className="text-[10px] tracking-[0.6em] font-light uppercase border-t border-black pt-2">MP MODAS PREMIUM</h1>
             </div>
         );
 
         function App() {
-            const whatsapp = "https://wa.me/5524992407940?text=Olá!%20Tenho%20interesse%20neste%20produto%20do%20catálogo.";
+            const whatsapp = "https://wa.me/5524992407940";
             
-            const products = [
-                { name: "Camisa Flamengo Oficial 24/25", tag: "Brasil", image: "https://images.unsplash.com/photo-1620311210427-046645398695?w=600" },
-                { name: "Camisa Palmeiras Puma Home", tag: "Brasil", image: "https://images.unsplash.com/photo-1551958219-acbc608c6377?w=600" },
-                { name: "Nike Dunk Low Retro Panda", tag: "Casual", image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600" },
-                { name: "Camisa São Paulo New Balance", tag: "Brasil", image: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=600" },
-                { name: "Nike Air Jordan 1 Low Grey", tag: "Streetwear", image: "https://images.unsplash.com/photo-1584000302558-ce0ba46d23f7?w=600" },
-                { name: "Camisa Corinthians Nike Black", tag: "Brasil", image: "https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=600" },
-                { name: "Adidas Forum Low White", tag: "Casual", image: "https://images.unsplash.com/photo-1552346154-21d32810aba3?w=600" },
-                { name: "Yeezy Boost 350 V2 Onyx", tag: "Hype", image: "https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=600" },
+            const inventory = [
+                { brand: "Nike Performance", model: "Jersey Player Edition White", cat: "Premium Wear", img: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800" },
+                { brand: "Puma Select", model: "Jersey Limited Gold Series", cat: "Premium Wear", img: "https://images.unsplash.com/photo-1551958219-acbc608c6377?w=800" },
+                { brand: "Jordan Brand", model: "Air Jordan 1 High 'Chicago'", cat: "Footwear", img: "https://images.unsplash.com/photo-1584000302558-ce0ba46d23f7?w=800" },
+                { brand: "Nike Sportswear", model: "Air Max 97 Silver Bullet", cat: "Footwear", img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800" },
+                { brand: "Nike Elite", model: "Jersey Player Edition Black", cat: "Premium Wear", img: "https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800" },
+                { brand: "Adidas Originals", model: "Forum Low Exhibit", cat: "Footwear", img: "https://images.unsplash.com/photo-1552346154-21d32810aba3?w=800" },
+                { brand: "Nike Air", model: "Air Max Pulse Drift", cat: "Footwear", img: "https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=800" },
+                { brand: "Jordan Brand", model: "Jordan 4 Retro Military Blue", cat: "Footwear", img: "https://images.unsplash.com/photo-1597041066858-1320499092d0?w=800" }
             ];
 
             return (
-                <div className="min-h-screen">
-                    <header className="fixed top-0 w-full z-50 bg-white border-b border-zinc-100 py-4">
-                        <div className="max-w-7xl mx-auto px-6 flex justify-center">
+                <div className="min-h-screen selection:bg-black selection:text-white">
+                    <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-xl z-50 border-b border-zinc-100">
+                        <div className="max-w-screen-xl mx-auto px-6 h-32 flex flex-col justify-center items-center">
                             <Logo />
                         </div>
-                    </header>
+                    </nav>
 
-                    <main className="pt-44 pb-20 px-6 max-w-7xl mx-auto">
-                        <div className="mb-12 border-l-4 border-black pl-4">
-                            <h2 className="text-3xl font-black uppercase tracking-tighter">Coleção Atual</h2>
-                            <p className="text-zinc-500 text-xs font-bold uppercase tracking-widest">Streetwear & Times Nacionais</p>
+                    <main className="pt-48 pb-20 px-6 max-w-screen-xl mx-auto">
+                        <div className="mb-20 text-center">
+                            <span className="text-[9px] uppercase tracking-[0.4em] text-zinc-400 font-bold mb-4 block">Spring / Summer 26</span>
+                            <h2 className="text-4xl md:text-6xl font-light tracking-tighter uppercase italic text-zinc-900">The New Standard.</h2>
                         </div>
 
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                            {products.map((p, i) => (
-                                <div key={i} className="group flex flex-col h-full">
-                                    <div className="aspect-[4/5] overflow-hidden bg-zinc-100 rounded-xl relative mb-4 shadow-sm group-hover:shadow-md transition">
-                                        <div className="absolute top-3 left-3 z-10 bg-black text-white text-[9px] font-black px-2 py-1 uppercase tracking-tighter">
-                                            {p.tag}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
+                            {inventory.map((item, idx) => (
+                                <div key={idx} className="product-card group cursor-pointer flex flex-col">
+                                    <div className="aspect-[3/4] bg-[#f7f7f7] overflow-hidden rounded-sm mb-6 relative">
+                                        <div className="absolute top-4 left-4 z-10">
+                                            <span className="bg-white text-black text-[8px] font-bold px-3 py-1 uppercase tracking-widest">{item.cat}</span>
                                         </div>
-                                        <img src={p.image} className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                                        <img src={item.img} className="w-full h-full object-cover" />
                                     </div>
-                                    <div className="flex flex-col flex-grow px-1 text-center">
-                                        <h3 className="font-bold text-[11px] md:text-xs uppercase tracking-tight text-zinc-900 mb-4 line-clamp-2 leading-tight">
-                                            {p.name}
-                                        </h3>
-                                        <a href={whatsapp} target="_blank" className="mt-auto block w-full border-2 border-black text-black py-2 text-[10px] font-black uppercase tracking-widest hover:bg-black hover:text-white transition rounded-lg">
+                                    <div className="flex-grow">
+                                        <p className="text-[10px] uppercase tracking-widest text-zinc-400 mb-1 font-bold">{item.brand}</p>
+                                        <h3 className="text-sm uppercase font-bold tracking-tight mb-4 text-zinc-800">{item.model}</h3>
+                                        <a href={whatsapp} target="_blank" className="inline-block text-[9px] font-black uppercase tracking-[0.3em] border-b-2 border-black pb-1 hover:text-zinc-500 hover:border-zinc-300 transition-all">
                                             Consultar Disponibilidade
                                         </a>
                                     </div>
@@ -75,8 +74,17 @@
                         </div>
                     </main>
 
-                    <footer className="bg-zinc-50 border-t border-zinc-100 py-12 text-center">
-                        <p className="text-zinc-400 text-[9px] font-bold uppercase tracking-[0.4em]">MP MODAS - Petrópolis/RJ</p>
+                    <footer className="py-20 border-t border-zinc-100">
+                        <div className="max-w-screen-xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-10">
+                            <div className="text-center md:text-left">
+                                <p className="text-[10px] font-black tracking-[0.5em] uppercase mb-2">MP MODAS ATELIER</p>
+                                <p className="text-zinc-400 text-[9px] uppercase tracking-widest">Petrópolis, Rio de Janeiro • Brasil</p>
+                            </div>
+                            <div className="flex gap-8">
+                                <a href={whatsapp} className="text-zinc-400 hover:text-black transition uppercase text-[9px] font-bold tracking-widest">Suporte</a>
+                                <a href="#" className="text-zinc-400 hover:text-black transition uppercase text-[9px] font-bold tracking-widest">Envios</a>
+                            </div>
+                        </div>
                     </footer>
                 </div>
             );
