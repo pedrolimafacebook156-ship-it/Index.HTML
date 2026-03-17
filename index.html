@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MP MODAS | Premium Streetwear</title>
+    <title>MP MODAS | New Collection</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
@@ -17,8 +16,6 @@
 <body>
     <div id="root"></div>
     <script type="text/babel">
-        const { useState } = React;
-
         const Logo = ({ light = false }) => (
             <div className="flex items-center gap-3 group">
                 <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,59 +31,91 @@
         );
 
         function App() {
-            const whatsapp = "https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Quero%20ver%20o%20catálogo.";
+            const whatsapp = "https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Quero%20fazer%20um%20pedido.";
+            
             const products = [
-                { name: "Camisa Flamengo Premium", price: "R$ 149,90", image: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800" },
-                { name: "Seleção Brasil Amarela", price: "R$ 159,90", image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800" },
-                { name: "Tênis Street Urban", price: "R$ 229,90", image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800" },
-                { name: "Tênis Casual White", price: "R$ 249,90", image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800" },
-                { name: "Camisa Real Madrid", price: "R$ 169,90", image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800" },
-                { name: "Sport Vision Black", price: "R$ 219,90", image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=800" }
+                { name: "Camisa Flamengo 24/25", price: "R$ 149,90", tag: "Novo", image: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=800&q=80" },
+                { name: "Tênis Nike Jordan Red", price: "R$ 349,90", tag: "Fogo", image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80" },
+                { name: "Seleção Brasil Amarela", price: "R$ 159,90", tag: "Elite", image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80" },
+                { name: "Corta Vento Oakley", price: "R$ 199,90", tag: "Inverno", image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=800&q=80" },
+                { name: "Camisa Real Madrid Blue", price: "R$ 169,90", tag: "Importada", image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80" },
+                { name: "Tênis Casual Classic", price: "R$ 259,90", tag: "Top", image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=800&q=80" },
+                { name: "Conjunto Moletom Tech", price: "R$ 289,90", tag: "Promo", image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80" },
+                { name: "Boné New Era Premium", price: "R$ 89,90", tag: "Style", image: "https://images.unsplash.com/photo-1588850567047-1845a9eecec3?auto=format&fit=crop&w=800&q=80" },
+                { name: "Camisa Inter Miami", price: "R$ 149,90", tag: "Messi", image: "https://images.unsplash.com/photo-1511746015097-d770ee397ff2?auto=format&fit=crop&w=800&q=80" },
+                { name: "Tênis Sport Blue", price: "R$ 219,90", tag: "Novo", image: "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=800&q=80" },
+                { name: "Calça Cargo Premium", price: "R$ 179,90", tag: "Tendência", image: "https://images.unsplash.com/photo-1624372333417-640348db4956?auto=format&fit=crop&w=800&q=80" },
+                { name: "Relógio Digital Sport", price: "R$ 129,90", tag: "Luxo", image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80" }
             ];
 
             return (
                 <div className="bg-white min-h-screen">
-                    <header className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-zinc-100 h-20 flex items-center">
+                    <header className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-zinc-100 h-20 flex items-center">
                         <div className="max-w-7xl mx-auto px-6 w-full flex justify-between items-center">
                             <Logo />
-                            <a href={whatsapp} target="_blank" className="bg-black text-white px-6 py-2 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-zinc-800 transition">WhatsApp</a>
+                            <a href={whatsapp} target="_blank" className="bg-black text-white px-5 py-2 rounded-full font-bold text-xs uppercase tracking-widest hover:scale-105 transition active:scale-95">WhatsApp</a>
                         </div>
                     </header>
 
-                    <section className="pt-40 pb-20 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center text-left">
-                        <div>
-                            <div className="w-12 h-1 bg-black mb-6"></div>
-                            <h1 className="text-6xl md:text-8xl font-black uppercase leading-[0.9] tracking-tighter mb-6 text-black">ESSENTIAL<br/><span className="text-zinc-300">STREETWEAR</span></h1>
-                            <p className="text-zinc-500 text-lg mb-8 max-w-md">O melhor da moda esportiva e urbana. Qualidade premium para quem tem estilo.</p>
-                            <a href="#produtos" className="inline-block bg-black text-white px-10 py-4 font-bold uppercase text-xs tracking-[.2em] hover:bg-zinc-800 transition">Ver Coleção</a>
+                    <section className="pt-40 pb-20 px-6 max-w-7xl mx-auto text-left">
+                        <div className="grid md:grid-cols-2 gap-12 items-center">
+                            <div>
+                                <span className="bg-black text-white text-[10px] font-black px-3 py-1 uppercase tracking-widest mb-4 inline-block">Nova Temporada 2026</span>
+                                <h1 className="text-6xl md:text-8xl font-black uppercase leading-[0.9] tracking-tighter mb-6">COLOR<br/><span className="text-zinc-200">DROP.</span></h1>
+                                <p className="text-zinc-500 text-lg mb-8 max-w-md">Sua loja premium em Petrópolis. Estilo, cor e qualidade em cada detalhe.</p>
+                                <a href="#produtos" className="inline-block bg-black text-white px-10 py-5 font-bold uppercase text-xs tracking-[.2em] hover:bg-zinc-800 transition">Explorar Catálogo</a>
+                            </div>
+                            <div className="relative">
+                                <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=800" className="rounded-sm shadow-2xl w-full h-[500px] object-cover" />
+                                <div className="absolute -bottom-6 -left-6 bg-white p-6 shadow-xl hidden md:block border border-zinc-100">
+                                    <p className="font-black text-2xl uppercase tracking-tighter">MP MODAS</p>
+                                    <p className="text-[10px] text-zinc-400 font-bold uppercase tracking-widest leading-none">Original Brand</p>
+                                </div>
+                            </div>
                         </div>
-                        <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=800" className="grayscale rounded-sm shadow-2xl w-full h-[500px] object-cover" />
                     </section>
 
                     <section id="produtos" className="max-w-7xl mx-auto px-6 py-20">
-                        <div className="flex justify-between items-end mb-12 border-b pb-6">
-                            <h2 className="text-3xl font-black uppercase tracking-tighter text-black">Drops Selecionados</h2>
-                            <span className="text-zinc-400 text-xs font-bold uppercase tracking-widest italic">New Arrival</span>
+                        <div className="flex justify-between items-end mb-16 border-b border-zinc-100 pb-8">
+                            <h2 className="text-4xl font-black uppercase tracking-tighter">Vitrine Premium</h2>
+                            <span className="text-zinc-400 text-xs font-bold uppercase tracking-[0.3em] mb-1">/ {products.length} Itens</span>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                        
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-12">
                             {products.map((p, i) => (
-                                <div key={i} className="group cursor-pointer">
-                                    <div className="aspect-[3/4] overflow-hidden bg-zinc-100 mb-4">
-                                        <img src={p.image} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-500" />
+                                <div key={i} className="group flex flex-col h-full">
+                                    <div className="aspect-[3/4] overflow-hidden bg-zinc-50 mb-5 relative rounded-sm">
+                                        <div className="absolute top-3 left-3 z-10 bg-white px-2 py-1 text-[9px] font-black uppercase tracking-widest border border-zinc-100 shadow-sm">{p.tag}</div>
+                                        <img src={p.image} className="w-full h-full object-cover group-hover:scale-110 transition duration-700 ease-in-out" />
+                                        <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition duration-300"></div>
                                     </div>
-                                    <div className="flex justify-between items-start">
-                                        <h3 className="font-bold uppercase text-xs tracking-wider text-zinc-800">{p.name}</h3>
-                                        <p className="font-black text-sm text-black">{p.price}</p>
+                                    <div className="flex flex-col flex-grow">
+                                        <h3 className="font-bold uppercase text-[11px] tracking-wider text-zinc-800 mb-1">{p.name}</h3>
+                                        <p className="font-black text-base text-black mb-4">{p.price}</p>
+                                        <a href={whatsapp} target="_blank" className="mt-auto block bg-zinc-50 border border-zinc-200 text-center py-3 text-[10px] font-black uppercase tracking-[0.2em] hover:bg-black hover:text-white hover:border-black transition duration-300">
+                                            Comprar via WhatsApp
+                                        </a>
                                     </div>
-                                    <a href={whatsapp} target="_blank" className="mt-4 block border border-zinc-200 text-center py-3 text-[10px] font-bold uppercase tracking-widest text-black hover:bg-black hover:text-white hover:border-black transition text-black">Solicitar no WhatsApp</a>
                                 </div>
                             ))}
                         </div>
                     </section>
 
-                    <footer className="bg-black text-white py-20 px-6 text-center">
-                        <div className="flex justify-center mb-8"><Logo light={true} /></div>
-                        <p className="text-zinc-500 text-[10px] uppercase tracking-[.3em]">© 2026 MP MODAS - Petrópolis, RJ</p>
+                    <footer className="bg-black text-white pt-32 pb-12 px-6">
+                        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left border-b border-zinc-800 pb-20 mb-12">
+                            <Logo light={true} />
+                            <div className="flex gap-12">
+                                <div>
+                                    <p className="text-zinc-500 text-[10px] uppercase font-black tracking-widest mb-4">Contato</p>
+                                    <p className="text-sm font-bold tracking-tight">(24) 99240-7940</p>
+                                </div>
+                                <div>
+                                    <p className="text-zinc-500 text-[10px] uppercase font-black tracking-widest mb-4">Localização</p>
+                                    <p className="text-sm font-bold tracking-tight">Petrópolis, RJ</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p className="text-zinc-700 text-[10px] uppercase tracking-[.4em] text-center">© 2026 MP MODAS - QUALIDADE ACIMA DE TUDO</p>
                     </footer>
                 </div>
             );
@@ -97,3 +126,4 @@
     </script>
 </body>
 </html>
+
