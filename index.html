@@ -10,12 +10,12 @@
         
         body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; font-family: 'Inter', sans-serif; background: #000; }
         
-        /* SLIDESHOW DE FUNDO - TÊNIS E CAMISAS */
+        /* SLIDESHOW DE FUNDO - TÊNIS E CAMISAS MASCULINAS */
         .bg-slideshow {
             position: fixed;
             width: 100vw; height: 100vh;
             z-index: -1;
-            filter: brightness(0.3) grayscale(20%);
+            filter: brightness(0.35);
         }
 
         .slide {
@@ -27,16 +27,17 @@
             animation: slideAnim 20s infinite;
         }
 
-        .slide:nth-child(1) { background-image: url('https://images.unsplash.com/photo-1584000302558-ce0ba46d23f7?w=1200'); animation-delay: 0s; }
-        .slide:nth-child(2) { background-image: url('https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=1200'); animation-delay: 5s; }
-        .slide:nth-child(3) { background-image: url('https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=1200'); animation-delay: 10s; }
-        .slide:nth-child(4) { background-image: url('https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=1200'); animation-delay: 15s; }
+        /* IMAGENS DE TÊNIS E CAMISAS QUE CARREGAM SEMPRE */
+        .slide:nth-child(1) { background-image: url('https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=1200&q=80'); animation-delay: 0s; } /* Tênis Nike */
+        .slide:nth-child(2) { background-image: url('https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=1200&q=80'); animation-delay: 5s; } /* Camisa Masculina */
+        .slide:nth-child(3) { background-image: url('https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=1200&q=80'); animation-delay: 10s; } /* Tênis Dunk */
+        .slide:nth-child(4) { background-image: url('https://images.unsplash.com/photo-1618354691792-d1d42acfd860?w=1200&q=80'); animation-delay: 15s; } /* Camisa Black */
 
         @keyframes slideAnim {
             0% { opacity: 0; transform: scale(1); }
             5% { opacity: 1; }
             25% { opacity: 1; }
-            30% { opacity: 0; transform: scale(1.1); }
+            30% { opacity: 0; transform: scale(1.05); }
             100% { opacity: 0; }
         }
 
@@ -78,7 +79,7 @@
             <div class="w-16 h-16 bg-white flex items-center justify-center mb-3 shadow-[0_0_40px_rgba(255,255,255,0.4)]">
                 <span class="text-black font-black text-2xl tracking-tighter">MP</span>
             </div>
-            <p class="text-white text-[9px] tracking-[0.7em] uppercase font-black opacity-50">Petrópolis Edition</p>
+            <p class="text-white text-[9px] tracking-[0.7em] uppercase font-black opacity-50 italic">Petrópolis RJ</p>
         </div>
 
         <div>
@@ -87,17 +88,22 @@
             <p class="text-zinc-300 text-[10px] uppercase tracking-[0.5em] mb-12 font-bold italic">Tênis • Camisas • Drop 2026</p>
             
             <div class="flex flex-col gap-6 w-80 mx-auto">
-                <a href="https://wa.me/5524992407940" target="_blank" class="btn-glow py-5 px-8 text-[11px] uppercase tracking-widest">
+                <a href="https://wa.me/5524992407940?text=Olá!%20Vi%20o%20catálogo%20da%20MP_Modas%20e%20gostaria%20de%20ver%20os%20modelos%20de%20Tênis%20e%20Camisas%20disponíveis." 
+                   target="_blank" 
+                   class="btn-glow py-5 px-8 text-[11px] uppercase tracking-widest text-center">
                     Chamar no WhatsApp
                 </a>
-                <a href="https://www.instagram.com/mp_modas2003/" target="_blank" class="glass text-white py-5 px-8 text-[11px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition duration-500">
+                
+                <a href="https://www.instagram.com/mp_modas2003/" 
+                   target="_blank" 
+                   class="glass text-white py-5 px-8 text-[11px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition duration-500">
                     Siga @mp_modas2003
                 </a>
             </div>
         </div>
 
         <div class="space-y-2">
-            <p class="text-white/40 text-[8px] uppercase tracking-[0.8em] font-bold">Qualidade Premium • Envios para Todo Brasil</p>
+            <p class="text-white/40 text-[8px] uppercase tracking-[0.8em] font-bold italic">Qualidade Premium • Men's Wear</p>
         </div>
 
     </div>
