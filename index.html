@@ -8,7 +8,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@400;700;900&display=swap');
         
-        body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; margin: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; margin: 0; scroll-behavior: smooth; }
         .font-brand { font-family: 'Syncopate', sans-serif; }
         
         /* Efeito de Vidro */
@@ -22,12 +22,13 @@
         .product-card {
             background: #050505;
             border: 1px solid #1a1a1a;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             border-radius: 8px;
         }
         .product-card:hover {
             border-color: #fff;
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: 0 10px 40px rgba(255,255,255,0.05);
         }
 
         .btn-glow {
@@ -45,13 +46,92 @@
 </head>
 <body>
 
-    <section class="relative h-screen flex flex-col items-center justify-center text-center px-6 border-b border-zinc-900">
+    <section id="hero" class="relative h-screen flex flex-col items-center justify-center text-center px-6 border-b border-zinc-900">
         <div class="absolute top-10 flex flex-col items-center">
-            <div class="w-14 h-14 bg-white flex items-center justify-center mb-2 shadow-2xl">
-                <span class="text-black font-black text-xl">MP</span>
+            <div class="w-16 h-16 bg-white flex items-center justify-center mb-2 shadow-2xl">
+                <span class="text-black font-black text-2xl tracking-tighter">MP</span>
             </div>
-            <p class="text-[8px] tracking-[0.6em] uppercase opacity-50">Petrópolis Edition</p>
+            <p class="text-[9px] tracking-[0.6em] uppercase opacity-50 font-bold">Petrópolis Edition</p>
         </div>
 
-        <div class="z-10">
-            <h1 class="font-brand text-5xl md:text-8xl mb
+        <div class="z-10 mt-16 md:mt-0">
+            <h1 class="font-brand text-5xl md:text-9xl mb-3 leading-none uppercase italic text-white tracking-tighter">MP_Modas</h1>
+            <div class="w-24 h-[2px] bg-white mx-auto mb-10 shadow-[0_0_10px_#fff]"></div>
+            <p class="text-zinc-500 text-[11px] tracking-[0.5em] uppercase mb-16 font-bold">Premium Men's Streetwear Atelier</p>
+            
+            <div class="flex flex-col gap-5 w-80 mx-auto">
+                <a href="https://wa.me/5524992407940?text=E%20aí!%20Vi%20o%20catálogo%20da%20MP_Modas%20e%20gostaria%20de%20ver%20os%20modelos%20de%20Tênis%20e%20Camisas%20disponíveis." 
+                   target="_blank" class="btn-glow py-5 text-[11px] uppercase tracking-[0.2em]">
+                    Chamar no WhatsApp
+                </a>
+                <a href="https://www.instagram.com/mp_modas2003/" 
+                   target="_blank" class="glass py-5 text-[11px] font-black uppercase tracking-[0.3em] text-white hover:bg-white hover:text-black transition duration-500">
+                    Siga @mp_modas2003
+                </a>
+            </div>
+        </div>
+
+        <a href="#catalogo" class="absolute bottom-10 animate-bounce opacity-40 hover:opacity-100 transition">
+            <p class="text-[9px] uppercase tracking-[0.4em] mb-3 font-bold text-white">Ver Catálogo</p>
+            <span class="text-white text-xl">↓</span>
+        </div>
+    </section>
+
+    <main id="catalogo" class="max-w-7xl mx-auto px-6 py-32 text-center">
+        <h2 class="font-brand text-2xl mb-16 uppercase italic underline decoration-zinc-800 underline-offset-8">Destaques da Semana</h2>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+            
+            <div class="product-card overflow-hidden">
+                <div class="aspect-square bg-zinc-900 border-b border-zinc-900">
+                    <img src="https://images.unsplash.com/photo-1584000302558-ce0ba46d23f7?w=800&q=80" class="w-full h-full object-cover" alt="Jordan High Masculino">
+                </div>
+                <div class="p-5 flex flex-col items-center">
+                    <p class="text-[10px] font-black uppercase tracking-widest mb-6 text-white h-8 flex items-center">TÊNIS MASCULINO</p>
+                    <a href="https://wa.me/5524992407940?text=E%20aí!%20Quero%20saber%20o%20valor%20desse%20Tênis%20Masculino%20(Jordan)" 
+                       target="_blank" class="inline-block w-full bg-white text-black py-3 text-[10px] font-black uppercase tracking-[0.1em] hover:bg-zinc-200">Consultar Valor</a>
+                </div>
+            </div>
+
+            <div class="product-card overflow-hidden">
+                <div class="aspect-square bg-zinc-900 border-b border-zinc-900">
+                    <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&q=80" class="w-full h-full object-cover" alt="Camisa Oversized Jovem">
+                </div>
+                <div class="p-5 flex flex-col items-center">
+                    <p class="text-[10px] font-black uppercase tracking-widest mb-6 text-white h-8 flex items-center">CAMISA MASCULINA</p>
+                    <a href="https://wa.me/5524992407940?text=E%20aí!%20Quero%20saber%20o%20valor%20dessa%20Camisa%20Masculina" 
+                       target="_blank" class="inline-block w-full bg-white text-black py-3 text-[10px] font-black uppercase tracking-[0.1em] hover:bg-zinc-200">Consultar Valor</a>
+                </div>
+            </div>
+
+            <div class="product-card overflow-hidden">
+                <div class="aspect-square bg-zinc-900 border-b border-zinc-900">
+                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=800&q=80" class="w-full h-full object-cover" alt="Sneaker Trap Style">
+                </div>
+                <div class="p-5 flex flex-col items-center">
+                    <p class="text-[10px] font-black uppercase tracking-widest mb-6 text-white h-8 flex items-center">TÊNIS MASCULINO</p>
+                    <a href="https://wa.me/5524992407940?text=E%20aí!%20Quero%20saber%20o%20valor%20desse%20Tênis%20Masculino" 
+                       target="_blank" class="inline-block w-full bg-white text-black py-3 text-[10px] font-black uppercase tracking-[0.1em] hover:bg-zinc-200">Consultar Valor</a>
+                </div>
+            </div>
+
+            <div class="product-card overflow-hidden">
+                <div class="aspect-square bg-zinc-900 border-b border-zinc-900">
+                    <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&q=80" class="w-full h-full object-cover" alt="Camisa Jovem Hype">
+                </div>
+                <div class="p-5 flex flex-col items-center">
+                    <p class="text-[10px] font-black uppercase tracking-widest mb-6 text-white h-8 flex items-center">CAMISA MASCULINA</p>
+                    <a href="https://wa.me/5524992407940?text=E%20aí!%20Quero%20saber%20o%20valor%20dessa%20Camisa%20Masculina" 
+                       target="_blank" class="inline-block w-full bg-white text-black py-3 text-[10px] font-black uppercase tracking-[0.1em] hover:bg-zinc-200">Consultar Valor</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-24 border-t border-zinc-900 text-center">
+        <p class="text-zinc-700 text-[9px] tracking-[0.8em] uppercase italic font-bold">MP_Modas • Petrópolis / Rio de Janeiro • © 2026</p>
+    </footer>
+
+</body>
+</html>
