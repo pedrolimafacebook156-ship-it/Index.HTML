@@ -1,4 +1,4 @@
-           <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;700;900&display=swap');
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: #ffffff; }
         .font-logo { font-family: 'Archivo Black', sans-serif; }
     </style>
 </head>
@@ -19,57 +19,64 @@
     <script type="text/babel">
         const Logo = () => (
             <div className="flex flex-col items-center">
-                {/* Link direto e estável para o seu logo */}
-                <img src="https://raw.githubusercontent.com/pedrolimafacebook156-ship-it/Index.HTML/main/115323.png" alt="MP MODAS LOGO" className="w-16 h-16 object-contain" onError={(e) => {e.target.src="https://via.placeholder.com/150?text=MP+MODAS"}} />
-                <span className="font-logo text-xs tracking-[0.2em] mt-1 text-black">MP MODAS</span>
+                {/* Logo principal buscando do seu repositório */}
+                <img src="115323.png" alt="MP MODAS LOGO" className="w-20 h-20 object-contain" onError={(e) => {e.target.src="https://via.placeholder.com/150?text=MP+MODAS"}} />
+                <span className="font-logo text-[10px] tracking-[0.3em] mt-2 text-black uppercase">Qualidade Premium</span>
             </div>
         );
 
         function App() {
-            const whatsapp = "https://wa.me/5524992407940?text=Olá%20MP%20Modas!";
+            const whatsapp = "https://wa.me/5524992407940?text=Olá!%20Tenho%20interesse%20neste%20produto%20do%20catálogo.";
             
             const products = [
-                { name: "Camisa Flamengo 24/25", price: "R$ 139,90", tag: "Campeão", image: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800" },
-                { name: "Camisa Brasil Amarela", price: "R$ 149,90", tag: "Elite", image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800" },
-                { name: "Nike Dunk Low Panda", price: "R$ 329,90", tag: "Hype", image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=800" },
-                { name: "Camisa Real Madrid", price: "R$ 139,90", tag: "Importada", image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800" },
-                { name: "Nike Air Jordan 1", price: "R$ 389,90", tag: "Lenda", image: "https://images.unsplash.com/photo-1584000302558-ce0ba46d23f7?w=800" },
-                { name: "Camisa Inter Miami", price: "R$ 149,90", tag: "Top", image: "https://images.unsplash.com/photo-1511746015097-d770ee397ff2?w=800" },
-                { name: "Corta Vento Oakley", price: "R$ 249,90", tag: "Street", image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800" },
-                { name: "Tênis Sport Blue", price: "R$ 219,90", tag: "Novo", image: "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=800" }
+                { name: "Camisa Flamengo Oficial 24/25", tag: "Brasil", image: "https://images.unsplash.com/photo-1620311210427-046645398695?w=600" },
+                { name: "Camisa Palmeiras Puma Home", tag: "Brasil", image: "https://images.unsplash.com/photo-1551958219-acbc608c6377?w=600" },
+                { name: "Nike Dunk Low Retro Panda", tag: "Casual", image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600" },
+                { name: "Camisa São Paulo New Balance", tag: "Brasil", image: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=600" },
+                { name: "Nike Air Jordan 1 Low Grey", tag: "Streetwear", image: "https://images.unsplash.com/photo-1584000302558-ce0ba46d23f7?w=600" },
+                { name: "Camisa Corinthians Nike Black", tag: "Brasil", image: "https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=600" },
+                { name: "Adidas Forum Low White", tag: "Casual", image: "https://images.unsplash.com/photo-1552346154-21d32810aba3?w=600" },
+                { name: "Yeezy Boost 350 V2 Onyx", tag: "Hype", image: "https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=600" },
             ];
 
             return (
-                <div className="bg-white min-h-screen">
-                    <header className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-zinc-100 py-2">
-                        <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+                <div className="min-h-screen">
+                    <header className="fixed top-0 w-full z-50 bg-white border-b border-zinc-100 py-4">
+                        <div className="max-w-7xl mx-auto px-6 flex justify-center">
                             <Logo />
-                            <a href={whatsapp} target="_blank" className="bg-black text-white px-6 py-2 rounded-full font-bold text-[10px] uppercase tracking-widest hover:scale-105 transition">Comprar</a>
                         </div>
                     </header>
 
-                    <section className="pt-40 pb-20 px-6 max-w-7xl mx-auto text-center">
-                        <h1 className="text-5xl md:text-8xl font-black uppercase leading-none tracking-tighter mb-4 text-black italic">
-                            TEMPORADA<br/><span className="text-zinc-200">2026</span>
-                        </h1>
-                        <p className="text-zinc-500 text-sm md:text-lg mb-8 font-bold italic">As melhores camisas de time e os tênis mais brabos do RJ.</p>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <main className="pt-44 pb-20 px-6 max-w-7xl mx-auto">
+                        <div className="mb-12 border-l-4 border-black pl-4">
+                            <h2 className="text-3xl font-black uppercase tracking-tighter">Coleção Atual</h2>
+                            <p className="text-zinc-500 text-xs font-bold uppercase tracking-widest">Streetwear & Times Nacionais</p>
+                        </div>
+
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                             {products.map((p, i) => (
-                                <div key={i} className="group border border-zinc-100 p-2 rounded-lg shadow-sm">
-                                    <div className="aspect-square overflow-hidden bg-zinc-100 rounded-md mb-4 relative">
-                                        <img src={p.image} className="w-full h-full object-cover" />
-                                        <div className="absolute top-2 left-2 bg-black text-white text-[8px] font-black px-2 py-1 uppercase">{p.tag}</div>
+                                <div key={i} className="group flex flex-col h-full">
+                                    <div className="aspect-[4/5] overflow-hidden bg-zinc-100 rounded-xl relative mb-4 shadow-sm group-hover:shadow-md transition">
+                                        <div className="absolute top-3 left-3 z-10 bg-black text-white text-[9px] font-black px-2 py-1 uppercase tracking-tighter">
+                                            {p.tag}
+                                        </div>
+                                        <img src={p.image} className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
                                     </div>
-                                    <h3 className="font-bold text-[10px] uppercase truncate">{p.name}</h3>
-                                    <p className="font-black text-sm text-black mb-3 underline">{p.price}</p>
-                                    <a href={whatsapp} target="_blank" className="block w-full bg-black text-white text-center py-2 text-[10px] font-black uppercase rounded">WhatsApp</a>
+                                    <div className="flex flex-col flex-grow px-1 text-center">
+                                        <h3 className="font-bold text-[11px] md:text-xs uppercase tracking-tight text-zinc-900 mb-4 line-clamp-2 leading-tight">
+                                            {p.name}
+                                        </h3>
+                                        <a href={whatsapp} target="_blank" className="mt-auto block w-full border-2 border-black text-black py-2 text-[10px] font-black uppercase tracking-widest hover:bg-black hover:text-white transition rounded-lg">
+                                            Consultar Disponibilidade
+                                        </a>
+                                    </div>
                                 </div>
                             ))}
                         </div>
-                    </section>
+                    </main>
 
-                    <footer className="bg-black text-white py-10 text-center uppercase tracking-[0.3em] text-[10px]">
-                        <p>© 2026 MP MODAS - QUALIDADE ACIMA DE TUDO</p>
+                    <footer className="bg-zinc-50 border-t border-zinc-100 py-12 text-center">
+                        <p className="text-zinc-400 text-[9px] font-bold uppercase tracking-[0.4em]">MP MODAS - Petrópolis/RJ</p>
                     </footer>
                 </div>
             );
@@ -80,4 +87,3 @@
     </script>
 </body>
 </html>
-                       
