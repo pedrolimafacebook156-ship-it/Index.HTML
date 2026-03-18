@@ -14,24 +14,22 @@
         body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; margin: 0; scroll-behavior: smooth; }
         .font-brand { font-family: 'Syncopate', sans-serif; }
         
-        /* Efeito de Vidro */
         .glass {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        /* Card de Produto */
         .product-card {
             background: #050505;
             border: 1px solid #1a1a1a;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 0.4s ease;
             border-radius: 8px;
+            overflow: hidden;
         }
         .product-card:hover {
             border-color: #fff;
             transform: translateY(-8px);
-            box-shadow: 0 10px 40px rgba(255,255,255,0.05);
         }
 
         .btn-glow {
@@ -53,72 +51,7 @@
         function App() {
             const whatsapp = "https://wa.me/5524992407940?text=E%20aí!%20Vi%20o%20catálogo%20da%20MP_Modas%20e%20gostaria%20de%20ver%20os%20modelos%20de%20Tênis%20e%20Camisas%20disponíveis.";
             
-            // NOVAS IMAGENS DE ALTA ESTABILIDADE (UNSPLASH) - FOCO TOTAL MASCULINO JOVEM/STREETWEAR
+            // CURADORIA 100% MASCULINA JUVEM (LINKS BLINDADOS - UNSPLASH)
             const products = [
-                { name: "TÊNIS MASCULINO", img: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=800&q=80", wa_text: "Quero%20saber%20o%20valor%20desse%20Tênis%20Masculino%20(Nike)" }, // Novo Tênis Nike Hype
-                { name: "CAMISA MASCULINA", img: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&q=80", wa_text: "Quero%20saber%20o%20valor%20dessa%20Camisa%20Masculina%20Hype" }, // Nova Camisa Hype
-                { name: "TÊNIS MASCULINO", img: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=800&q=80", wa_text: "Quero%20saber%20o%20valor%20desse%20Tênis%20Masculino%20(Jordan)" }, // Novo Jordan Masculino
-                { name: "CAMISA MASCULINA", img: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&q=80", wa_text: "Quero%20saber%20o%20valor%20dessa%20Camisa%20Masculina%20Basic" } // Nova Camisa Jovem
-            ];
-
-            return (
-                <div className="min-h-screen">
-                    <section id="hero" className="relative h-screen flex flex-col items-center justify-center text-center px-6 border-b border-zinc-900">
-                        <div className="absolute top-10 flex flex-col items-center">
-                            <div className="w-16 h-16 bg-white flex items-center justify-center mb-2 shadow-2xl">
-                                <span className="text-black font-black text-2xl tracking-tighter">MP</span>
-                            </div>
-                            <p className="text-[9px] tracking-[0.6em] uppercase opacity-50 font-bold">Petrópolis Edition</p>
-                        </div>
-
-                        <div className="z-10 mt-16 md:mt-0">
-                            <h1 className="font-brand text-5xl md:text-9xl mb-3 leading-none uppercase italic text-white tracking-tighter">MP_Modas</h1>
-                            <div className="w-24 h-[2px] bg-white mx-auto mb-10 shadow-[0_0_10px_#fff]"></div>
-                            <p className="text-zinc-500 text-[11px] tracking-[0.5em] uppercase mb-16 font-bold">Premium Men's Streetwear Atelier</p>
-                            
-                            <div className="flex flex-col gap-5 w-80 mx-auto">
-                                <a href={whatsapp} target="_blank" className="btn-glow py-5 text-[11px] uppercase tracking-[0.2em] text-center">
-                                    Chamar no WhatsApp
-                                </a>
-                                <a href="https://www.instagram.com/mp_modas2003/" target="_blank" className="glass py-5 text-[11px] font-black uppercase tracking-[0.3em] text-white hover:bg-white hover:text-black transition duration-500 text-center">
-                                    Siga @mp_modas2003
-                                </a>
-                            </div>
-                        </div>
-
-                        <a href="#catalogo" className="absolute bottom-10 animate-bounce opacity-40 hover:opacity-100 transition">
-                            <p className="text-[9px] uppercase tracking-[0.4em] mb-3 font-bold text-white text-center">Ver Catálogo</p>
-                            <span className="text-white text-xl text-center flex justify-center">↓</span>
-                        </a>
-                    </section>
-
-                    <main id="catalogo" className="max-w-7xl mx-auto px-6 py-32 text-center">
-                        <h2 className="font-brand text-2xl mb-16 uppercase italic underline decoration-zinc-800 underline-offset-8">Destaques da Semana</h2>
-                        
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-                            {products.map((p, i) => (
-                                <div key={i} className="product-card overflow-hidden">
-                                    <div className="aspect-square bg-zinc-900 border-b border-zinc-900">
-                                        <img src={p.img} alt={p.name} className="w-full h-full object-cover" />
-                                    </div>
-                                    <div className="p-5 flex flex-col items-center">
-                                        <p className="text-[10px] font-black uppercase tracking-widest mb-6 text-white h-8 flex items-center justify-center text-center">{p.name}</p>
-                                        <a href={`https://wa.me/5524992407940?text=E%20aí!%20${p.wa_text}`} target="_blank" className="inline-block w-full bg-white text-black py-3 text-[10px] font-black uppercase tracking-[0.1em] hover:bg-zinc-200">Consultar Valor</a>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </main>
-
-                    <footer className="py-24 border-t border-zinc-900 text-center">
-                        <p className="text-zinc-700 text-[9px] tracking-[0.8em] uppercase italic font-bold">MP_Modas • Petrópolis / Rio de Janeiro • © 2026</p>
-                    </footer>
-                </div>
-            );
-        }
-
-        const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(<App />);
-    </script>
-</body>
-</html>
+                { name: "TÊNIS MASCULINO", img: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=800&q=80", wa_text: "Quero%20ver%20esse%20Tênis%20Masculino%20(Jordan%204)" }, // Jordan 4 Masculino
+                { name: "CAMISA MASCULINA", img: "
