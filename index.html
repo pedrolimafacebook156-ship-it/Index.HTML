@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MP_MODAS | Camisetas Masculinas Premium</title>
+    <title>MP_MODAS | Premium Men's Streetwear</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@400;600;900&display=swap');
@@ -22,6 +22,10 @@
             overflow: hidden;
         }
         .product-card:hover { border-color: #fff; transform: translateY(-10px); }
+
+        .badge-hot { background: #ff3e3e; color: white; padding: 4px 8px; font-size: 8px; font-weight: 900; border-radius: 4px; position: absolute; top: 12px; left: 12px; z-index: 20; }
+        .badge-last { background: #fff; color: black; padding: 4px 8px; font-size: 8px; font-weight: 900; border-radius: 4px; position: absolute; top: 12px; left: 12px; z-index: 20; }
+        .badge-new { background: #25d366; color: white; padding: 4px 8px; font-size: 8px; font-weight: 900; border-radius: 4px; position: absolute; top: 12px; left: 12px; z-index: 20; }
 
         .btn-main {
             background: #fff; color: #000; font-weight: 900;
@@ -74,11 +78,11 @@
     <header class="h-screen flex flex-col items-center justify-center text-center px-6 border-b border-zinc-900">
         <div class="reveal active">
             <h1 class="font-brand text-4xl md:text-6xl lg:text-8xl mb-4 italic leading-none text-white tracking-tighter">MP_MODAS</h1>
-            <p class="text-zinc-500 text-[8px] md:text-[11px] tracking-[0.6em] uppercase mb-12 font-bold">Original Camisetas Masculinas • Petrópolis / RJ</p>
+            <p class="text-zinc-500 text-[8px] md:text-[11px] tracking-[0.6em] uppercase mb-12 font-bold">Original Streetwear • Petrópolis / RJ</p>
             
             <div class="flex flex-col md:flex-row gap-4 justify-center">
                 <a href="#catalogo" class="btn-main py-5 px-10 text-[10px] uppercase tracking-widest">Ver Catálogo</a>
-                <a href="https://wa.me/5524992407940?text=Olá!%20Gostaria%20de%20falar%20com%20o%20consultor%20da%20MP_Modas%20sobre%20as%20camisetas." target="_blank" class="glass py-5 px-10 text-[10px] uppercase tracking-widest font-bold">Consultar Especialista</a>
+                <a href="https://wa.me/5524992407940?text=Olá!%20Gostaria%20de%20falar%20com%20o%20consultor%20da%20MP_Modas." target="_blank" class="glass py-5 px-10 text-[10px] uppercase tracking-widest font-bold">Consultar Especialista</a>
             </div>
         </div>
     </header>
@@ -103,40 +107,75 @@
     <main id="catalogo" class="max-w-7xl mx-auto px-6 py-32">
         <div class="text-center mb-20">
             <h2 class="font-brand text-2xl mb-4 uppercase italic">Drop da Semana</h2>
-            <p class="text-zinc-500 text-[9px] uppercase tracking-widest">Camisetas exclusivas e limitadas</p>
+            <p class="text-zinc-500 text-[9px] uppercase tracking-widest">Peças exclusivas e limitadas masculinas</p>
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             
             <div class="product-card reveal">
-                <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=800&q=80" class="w-full aspect-square object-cover" alt="Camiseta Jordan">
+                <span class="badge-new">NOVIDADE ✨</span>
+                <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=800&q=80" class="w-full aspect-square object-cover" alt="Jordan Hype">
                 <div class="p-4 text-center">
-                    <p class="text-[9px] font-black mb-4">CAMISETA MASCULINA</p>
-                    <a href="https://wa.me/5524992407940?text=Quero%20reservar%20a%20Camiseta%20Masculina%20Jordan" target="_blank" class="block w-full bg-white text-black py-3 text-[9px] font-black uppercase tracking-widest">Reservar</a>
+                    <p class="text-[9px] font-black mb-4">TÊNIS MASCULINO HYPE</p>
+                    <a href="https://wa.me/5524992407940?text=Quero%20reservar%20o%20Tênis%20Masculino%20Hype" target="_blank" class="block w-full bg-white text-black py-3 text-[9px] font-black uppercase tracking-widest">Reservar</a>
                 </div>
             </div>
 
             <div class="product-card reveal">
-                <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&q=80" class="w-full aspect-square object-cover" alt="Camiseta Armani">
+                <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&q=80" class="w-full aspect-square object-cover" alt="Camisa Premium">
                 <div class="p-4 text-center">
-                    <p class="text-[9px] font-black mb-4">CAMISETA MASCULINA</p>
-                    <a href="https://wa.me/5524992407940?text=Quero%20reservar%20a%20Camiseta%20Masculina%20Armani" target="_blank" class="block w-full bg-white text-black py-3 text-[9px] font-black uppercase tracking-widest">Reservar</a>
+                    <p class="text-[9px] font-black mb-4">CAMISA MASCULINA PREMIUM</p>
+                    <a href="https://wa.me/5524992407940?text=Quero%20reservar%20a%20Camisa%20Masculina%20Premium" target="_blank" class="block w-full bg-white text-black py-3 text-[9px] font-black uppercase tracking-widest">Reservar</a>
                 </div>
             </div>
 
             <div class="product-card reveal">
-                <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=800&q=80" class="w-full aspect-square object-cover" alt="Camiseta Streetwear">
+                <span class="badge-hot">MAIS VENDIDO 🔥</span>
+                <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=800&q=80" class="w-full aspect-square object-cover" alt="Jordan Culture">
                 <div class="p-4 text-center">
-                    <p class="text-[9px] font-black mb-4">CAMISETA MASCULINA</p>
-                    <a href="https://wa.me/5524992407940?text=Quero%20reservar%20a%20Camiseta%20Masculina%20Streetwear" target="_blank" class="block w-full bg-white text-black py-3 text-[9px] font-black uppercase tracking-widest">Reservar</a>
+                    <p class="text-[9px] font-black mb-4">TÊNIS MASCULINO JORDAN</p>
+                    <a href="https://wa.me/5524992407940?text=Quero%20esse%20Jordan%20Masculino" target="_blank" class="block w-full bg-white text-black py-3 text-[9px] font-black uppercase tracking-widest">Reservar</a>
                 </div>
             </div>
 
             <div class="product-card reveal">
-                <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&q=80" class="w-full aspect-square object-cover" alt="Camisa Masculina Petrópolis">
+                <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&q=80" class="w-full aspect-square object-cover" alt="Camisa Trap">
                 <div class="p-4 text-center">
-                    <p class="text-[9px] font-black mb-4">CAMISETA MASCULINA</p>
-                    <a href="https://wa.me/5524992407940?text=Quero%20reservar%20a%20Camiseta%20Masculina%20Petrópolis" target="_blank" class="block w-full bg-white text-black py-3 text-[9px] font-black uppercase tracking-widest">Reservar</a>
+                    <p class="text-[9px] font-black mb-4">CAMISA MASCULINA TRAP</p>
+                    <a href="https://wa.me/5524992407940?text=Quero%20a%20Camisa%20Masculina%20Trap" target="_blank" class="block w-full bg-white text-black py-3 text-[9px] font-black uppercase tracking-widest">Reservar</a>
+                </div>
+            </div>
+
+            <div class="product-card reveal">
+                <span class="badge-last">ÚLTIMAS PEÇAS ⏳</span>
+                <img src="https://images.unsplash.com/photo-1584000302558-ce0ba46d23f7?w=800&q=80" class="w-full aspect-square object-cover" alt="Sneaker Retro">
+                <div class="p-4 text-center">
+                    <p class="text-[9px] font-black mb-4">TÊNIS MASCULINO RETRO</p>
+                    <a href="https://wa.me/5524992407940?text=Quero%20reservar%20o%20Retro%20Masculino" target="_blank" class="block w-full bg-white text-black py-3 text-[9px] font-black uppercase tracking-widest">Reservar</a>
+                </div>
+            </div>
+
+            <div class="product-card reveal">
+                <img src="https://images.unsplash.com/photo-1576871333782-b8c17d33d59e?w=800&q=80" class="w-full aspect-square object-cover" alt="Camisa Jovem Hype">
+                <div class="p-4 text-center">
+                    <p class="text-[9px] font-black mb-4">CAMISA MASCULINA HYPE</p>
+                    <a href="https://wa.me/5524992407940?text=Quero%20essa%20Camisa%20Masculina" target="_blank" class="block w-full bg-white text-black py-3 text-[9px] font-black uppercase tracking-widest">Reservar</a>
+                </div>
+            </div>
+
+            <div class="product-card reveal">
+                <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&q=80" class="w-full aspect-square object-cover" alt="Sneaker Trap">
+                <div class="p-4 text-center">
+                    <p class="text-[9px] font-black mb-4">TÊNIS MASCULINO TRAP</p>
+                    <a href="https://wa.me/5524992407940?text=Quero%20esse%20Tênis%20Masculino" target="_blank" class="block w-full bg-white text-black py-3 text-[9px] font-black uppercase tracking-widest">Reservar</a>
+                </div>
+            </div>
+
+            <div class="product-card reveal">
+                <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800&q=80" class="w-full aspect-square object-cover" alt="Camisa Oversized">
+                <div class="p-4 text-center">
+                    <p class="text-[9px] font-black mb-4">CAMISA MASCULINA OVERSIZED</p>
+                    <a href="https://wa.me/5524992407940?text=Quero%20a%20Camisa%20Masculina%20Oversized" target="_blank" class="block w-full bg-white text-black py-3 text-[9px] font-black uppercase tracking-widest">Reservar</a>
                 </div>
             </div>
 
@@ -159,8 +198,8 @@
         </div>
     </section>
 
-    <footer class="py-20 border-t border-zinc-900 text-center">
-        <p class="text-zinc-800 text-[8px] tracking-[0.8em] uppercase italic font-bold">MP_Modas © 2026 • Petrópolis / RJ</p>
+    <footer class="py-20 border-t border-zinc-900 text-center text-zinc-700 text-[9px] tracking-[0.8em] uppercase italic font-bold">
+        MP_Modas © 2026 • Petrópolis / RJ
     </footer>
 
     <script>
