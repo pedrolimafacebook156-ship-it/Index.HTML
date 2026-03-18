@@ -3,24 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MP Modas | Ultra Premium Store</title>
-  <meta name="description" content="MP Modas - Camisas de time, seleções e tênis premium com estilo, qualidade e atendimento rápido no WhatsApp." />
-  <meta name="theme-color" content="#e11d48" />
+  <title>MP Modas | Camisas Premium Masculinas</title>
+  <meta name="description" content="MP Modas - Camisas premium masculinas com estilo, elegância e qualidade. Compre direto no WhatsApp." />
+  <meta name="theme-color" content="#111111" />
   <style>
     :root{
       --bg:#0a0a0a;
-      --bg2:#111111;
-      --card:#171717;
-      --card2:#1f1f1f;
-      --text:#ffffff;
-      --muted:#c9c9c9;
+      --bg2:#121212;
+      --card:#181818;
       --line:#2a2a2a;
-      --primary:#e11d48;
-      --primary-2:#ff4d6d;
+      --text:#ffffff;
+      --muted:#cfcfcf;
+      --gold:#d4af37;
+      --gold2:#f5d76e;
       --green:#25d366;
-      --shadow:0 10px 30px rgba(0,0,0,.35);
-      --radius:22px;
-      --gold:#facc15;
+      --shadow:0 12px 35px rgba(0,0,0,.35);
+      --radius:24px;
     }
 
     *{
@@ -36,8 +34,8 @@
 
     body{
       background:
-        radial-gradient(circle at top right, rgba(225,29,72,.08), transparent 30%),
-        radial-gradient(circle at bottom left, rgba(255,77,109,.05), transparent 35%),
+        radial-gradient(circle at top right, rgba(212,175,55,.06), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(245,215,110,.04), transparent 35%),
         var(--bg);
       color:var(--text);
       line-height:1.6;
@@ -60,26 +58,27 @@
     }
 
     .section{
-      padding:80px 0;
+      padding:85px 0;
     }
 
     .section-title{
       text-align:center;
-      font-size:clamp(2rem, 4vw, 3rem);
+      font-size:clamp(2rem, 4vw, 3.2rem);
       margin-bottom:14px;
       font-weight:900;
-      letter-spacing:.3px;
+      letter-spacing:.5px;
     }
 
     .section-title span{
-      color:var(--primary);
+      color:var(--gold2);
     }
 
     .section-subtitle{
       text-align:center;
       color:var(--muted);
-      max-width:700px;
-      margin:0 auto 45px;
+      max-width:760px;
+      margin:0 auto 50px;
+      font-size:1rem;
     }
 
     /* HEADER */
@@ -88,27 +87,63 @@
       top:0;
       z-index:999;
       backdrop-filter:blur(10px);
-      background:rgba(10,10,10,.86);
-      border-bottom:1px solid rgba(255,255,255,.05);
+      background:rgba(10,10,10,.9);
+      border-bottom:1px solid rgba(255,255,255,.06);
     }
 
     .nav{
       display:flex;
-      align-items:center;
       justify-content:space-between;
+      align-items:center;
       padding:16px 0;
-      gap:16px;
+      gap:18px;
       flex-wrap:wrap;
     }
 
-    .logo{
-      font-size:1.7rem;
-      font-weight:900;
-      letter-spacing:.5px;
+    /* LOGO DESTAQUE */
+    .logo-wrap{
+      display:flex;
+      align-items:center;
+      gap:14px;
     }
 
-    .logo span{
-      color:var(--primary);
+    .logo-icon{
+      width:62px;
+      height:62px;
+      border-radius:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg, var(--gold), var(--gold2));
+      color:#111;
+      font-weight:900;
+      font-size:1.6rem;
+      box-shadow:0 10px 25px rgba(212,175,55,.25);
+    }
+
+    .logo-text{
+      display:flex;
+      flex-direction:column;
+      line-height:1;
+    }
+
+    .logo-main{
+      font-size:2rem;
+      font-weight:900;
+      letter-spacing:1px;
+      color:#fff;
+    }
+
+    .logo-main span{
+      color:var(--gold2);
+    }
+
+    .logo-sub{
+      font-size:.8rem;
+      color:#d6d6d6;
+      letter-spacing:2px;
+      margin-top:4px;
+      text-transform:uppercase;
     }
 
     .menu{
@@ -119,10 +154,10 @@
     }
 
     .menu a{
-      color:#e8e8e8;
       font-weight:700;
-      transition:.3s;
+      color:#e7e7e7;
       position:relative;
+      transition:.3s;
     }
 
     .menu a::after{
@@ -132,7 +167,7 @@
       bottom:-5px;
       width:0;
       height:2px;
-      background:var(--primary);
+      background:var(--gold2);
       transition:.3s;
     }
 
@@ -152,19 +187,19 @@
       padding:14px 24px;
       border-radius:14px;
       font-weight:800;
-      transition:.3s ease;
+      transition:.3s;
       border:none;
       cursor:pointer;
     }
 
-    .btn-primary{
-      background:linear-gradient(135deg, var(--primary), var(--primary-2));
-      color:#fff;
-      box-shadow:0 10px 25px rgba(225,29,72,.25);
+    .btn-gold{
+      background:linear-gradient(135deg, var(--gold), var(--gold2));
+      color:#111;
+      box-shadow:0 10px 25px rgba(212,175,55,.2);
     }
 
-    .btn-primary:hover{
-      transform:translateY(-3px) scale(1.02);
+    .btn-gold:hover{
+      transform:translateY(-3px);
     }
 
     .btn-whats{
@@ -174,18 +209,18 @@
     }
 
     .btn-whats:hover{
-      transform:translateY(-3px) scale(1.02);
+      transform:translateY(-3px);
     }
 
     /* HERO */
     .hero{
-      position:relative;
-      min-height:92vh;
+      min-height:95vh;
       display:flex;
       align-items:center;
       background:
-        linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.78)),
-        url('https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+        linear-gradient(rgba(0,0,0,.68), rgba(0,0,0,.78)),
+        url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      position:relative;
       overflow:hidden;
     }
 
@@ -193,44 +228,85 @@
       content:"";
       position:absolute;
       inset:0;
-      background:radial-gradient(circle at 70% 20%, rgba(225,29,72,.18), transparent 30%);
+      background:radial-gradient(circle at 75% 20%, rgba(212,175,55,.14), transparent 30%);
       pointer-events:none;
     }
 
     .hero-content{
       position:relative;
       z-index:2;
-      max-width:760px;
+      max-width:780px;
       animation:fadeUp 1s ease forwards;
     }
 
-    .tag{
+    .premium-tag{
       display:inline-block;
-      background:rgba(225,29,72,.15);
-      border:1px solid rgba(225,29,72,.35);
-      color:#ffdbe3;
-      padding:8px 14px;
+      padding:9px 16px;
       border-radius:999px;
+      background:rgba(212,175,55,.12);
+      border:1px solid rgba(212,175,55,.35);
+      color:#f5e3a1;
       font-size:.92rem;
-      font-weight:700;
+      font-weight:800;
       margin-bottom:18px;
+    }
+
+    /* LOGO GIGANTE NO HERO */
+    .hero-brand{
+      margin-bottom:18px;
+      display:flex;
+      align-items:center;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    .hero-logo-box{
+      width:78px;
+      height:78px;
+      border-radius:22px;
+      background:linear-gradient(135deg, var(--gold), var(--gold2));
+      color:#111;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:2rem;
+      font-weight:900;
+      box-shadow:0 14px 30px rgba(212,175,55,.22);
+    }
+
+    .hero-brand-text h2{
+      font-size:clamp(2rem, 5vw, 4rem);
+      line-height:1;
+      font-weight:900;
+      letter-spacing:1px;
+    }
+
+    .hero-brand-text h2 span{
+      color:var(--gold2);
+    }
+
+    .hero-brand-text p{
+      margin:6px 0 0 0;
+      color:#d9d9d9;
+      letter-spacing:3px;
+      font-size:.82rem;
+      text-transform:uppercase;
     }
 
     .hero h1{
-      font-size:clamp(2.4rem, 6vw, 5rem);
+      font-size:clamp(2.3rem, 5.6vw, 5.2rem);
       line-height:1.05;
       font-weight:900;
-      margin-bottom:18px;
+      margin-bottom:16px;
     }
 
     .hero h1 span{
-      color:var(--primary);
-      text-shadow:0 0 24px rgba(225,29,72,.25);
+      color:var(--gold2);
     }
 
     .hero p{
-      color:#e5e5e5;
-      font-size:clamp(1rem, 2vw, 1.2rem);
+      color:#ececec;
+      font-size:clamp(1rem, 2vw, 1.15rem);
       max-width:650px;
       margin-bottom:28px;
     }
@@ -239,62 +315,62 @@
       display:flex;
       gap:14px;
       flex-wrap:wrap;
-      margin-bottom:28px;
+      margin-bottom:30px;
     }
 
-    .hero-stats{
+    .hero-features{
       display:grid;
-      grid-template-columns:repeat(3, minmax(120px, 1fr));
+      grid-template-columns:repeat(3, minmax(140px, 1fr));
       gap:16px;
-      max-width:640px;
+      max-width:700px;
     }
 
-    .stat{
+    .feature-box{
       background:rgba(255,255,255,.04);
       border:1px solid rgba(255,255,255,.06);
-      padding:18px;
       border-radius:18px;
+      padding:18px;
       backdrop-filter:blur(6px);
     }
 
-    .stat h3{
-      font-size:1.4rem;
-      color:var(--primary);
-      margin-bottom:4px;
+    .feature-box h3{
+      color:var(--gold2);
+      font-size:1.15rem;
+      margin-bottom:5px;
     }
 
-    .stat p{
-      font-size:.92rem;
-      color:#d9d9d9;
+    .feature-box p{
+      font-size:.9rem;
+      color:#ddd;
       margin:0;
     }
 
-    /* FLOATING OFFER BAR */
-    .offer-bar{
-      background:linear-gradient(90deg, #7f1d1d, #be123c, #7f1d1d);
-      border-top:1px solid rgba(255,255,255,.06);
-      border-bottom:1px solid rgba(255,255,255,.06);
+    /* BARRA */
+    .luxury-bar{
+      background:linear-gradient(90deg, #5c4811, #b28a2a, #5c4811);
       padding:14px 0;
       overflow:hidden;
+      border-top:1px solid rgba(255,255,255,.06);
+      border-bottom:1px solid rgba(255,255,255,.06);
     }
 
-    .marquee{
+    .luxury-text{
       white-space:nowrap;
       display:inline-block;
-      animation:marquee 18s linear infinite;
-      font-weight:800;
-      color:#fff;
+      animation:marquee 20s linear infinite;
+      font-weight:900;
+      color:#111;
     }
 
     /* BENEFITS */
     .benefits{
       display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
       gap:22px;
     }
 
     .benefit-card{
-      background:linear-gradient(180deg, var(--card), var(--card2));
+      background:linear-gradient(180deg, #171717, #1e1e1e);
       border:1px solid var(--line);
       border-radius:var(--radius);
       padding:28px 22px;
@@ -304,99 +380,43 @@
 
     .benefit-card:hover{
       transform:translateY(-8px);
-      border-color:rgba(225,29,72,.5);
+      border-color:rgba(212,175,55,.35);
     }
 
     .icon{
-      width:54px;
-      height:54px;
+      width:56px;
+      height:56px;
       border-radius:16px;
       display:flex;
       align-items:center;
       justify-content:center;
       font-size:1.4rem;
       margin-bottom:14px;
-      background:rgba(225,29,72,.12);
-      border:1px solid rgba(225,29,72,.28);
+      background:rgba(212,175,55,.1);
+      border:1px solid rgba(212,175,55,.22);
     }
 
     .benefit-card h3{
       margin-bottom:8px;
-      font-size:1.2rem;
+      font-size:1.18rem;
     }
 
     .benefit-card p{
       color:var(--muted);
-      font-size:.97rem;
-    }
-
-    /* COUNTDOWN */
-    .countdown-wrap{
-      background:
-        linear-gradient(135deg, rgba(225,29,72,.12), rgba(255,77,109,.08)),
-        #111;
-      border:1px solid rgba(225,29,72,.18);
-      border-radius:28px;
-      padding:38px 20px;
-      text-align:center;
-      box-shadow:var(--shadow);
-    }
-
-    .countdown-title{
-      font-size:2rem;
-      font-weight:900;
-      margin-bottom:10px;
-    }
-
-    .countdown-title span{
-      color:var(--gold);
-    }
-
-    .countdown-text{
-      color:var(--muted);
-      margin-bottom:28px;
-    }
-
-    .countdown{
-      display:flex;
-      justify-content:center;
-      gap:14px;
-      flex-wrap:wrap;
-      margin-bottom:24px;
-    }
-
-    .time-box{
-      min-width:95px;
-      background:rgba(255,255,255,.04);
-      border:1px solid rgba(255,255,255,.06);
-      border-radius:18px;
-      padding:18px 12px;
-    }
-
-    .time-box h3{
-      font-size:2rem;
-      color:var(--primary);
-      line-height:1;
-      margin-bottom:6px;
-    }
-
-    .time-box p{
-      color:#ddd;
-      font-size:.9rem;
-      font-weight:700;
+      font-size:.96rem;
     }
 
     /* PRODUCTS */
     .products{
       display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns:repeat(auto-fit, minmax(270px, 1fr));
       gap:26px;
     }
 
     .product-card{
-      background:linear-gradient(180deg, #151515, #1c1c1c);
+      background:linear-gradient(180deg, #151515, #1b1b1b);
       border:1px solid var(--line);
-      border-radius:26px;
+      border-radius:28px;
       overflow:hidden;
       box-shadow:var(--shadow);
       transition:.35s;
@@ -405,7 +425,7 @@
 
     .product-card:hover{
       transform:translateY(-10px);
-      border-color:rgba(225,29,72,.5);
+      border-color:rgba(212,175,55,.35);
     }
 
     .badge{
@@ -413,18 +433,18 @@
       top:14px;
       left:14px;
       z-index:2;
-      background:linear-gradient(135deg, var(--primary), var(--primary-2));
-      color:#fff;
+      background:linear-gradient(135deg, var(--gold), var(--gold2));
+      color:#111;
       padding:8px 12px;
       border-radius:999px;
-      font-size:.8rem;
-      font-weight:800;
-      box-shadow:0 6px 18px rgba(225,29,72,.28);
+      font-size:.78rem;
+      font-weight:900;
+      box-shadow:0 8px 20px rgba(212,175,55,.2);
     }
 
     .product-image{
+      height:340px;
       overflow:hidden;
-      height:300px;
     }
 
     .product-image img{
@@ -442,13 +462,13 @@
     }
 
     .product-info h3{
-      font-size:1.2rem;
+      font-size:1.25rem;
       margin-bottom:8px;
     }
 
     .product-info p{
       color:var(--muted);
-      font-size:.94rem;
+      font-size:.95rem;
       margin-bottom:14px;
     }
 
@@ -456,20 +476,20 @@
       display:flex;
       align-items:center;
       gap:12px;
-      margin-bottom:16px;
       flex-wrap:wrap;
+      margin-bottom:16px;
     }
 
     .old-price{
-      color:#8f8f8f;
+      color:#888;
       text-decoration:line-through;
       font-size:.95rem;
     }
 
     .price{
-      font-size:1.5rem;
-      color:var(--green);
+      font-size:1.55rem;
       font-weight:900;
+      color:var(--gold2);
     }
 
     .product-actions{
@@ -488,24 +508,26 @@
       transition:.3s;
     }
 
-    .mini-btn.primary{
-      background:linear-gradient(135deg, var(--primary), var(--primary-2));
+    .mini-btn.gold{
+      background:linear-gradient(135deg, var(--gold), var(--gold2));
+      color:#111;
     }
 
     .mini-btn.whats{
       background:#1e8e4a;
+      color:#fff;
     }
 
     .mini-btn:hover{
       transform:translateY(-2px);
     }
 
-    /* HIGHLIGHT BANNER */
+    /* DESTAQUE */
     .highlight{
       background:
-        linear-gradient(135deg, rgba(225,29,72,.18), rgba(255,77,109,.08)),
-        #121212;
-      border:1px solid rgba(225,29,72,.18);
+        linear-gradient(135deg, rgba(212,175,55,.08), rgba(245,215,110,.05)),
+        #111;
+      border:1px solid rgba(212,175,55,.18);
       border-radius:30px;
       padding:38px;
       display:grid;
@@ -522,7 +544,7 @@
     }
 
     .highlight h2 span{
-      color:var(--gold);
+      color:var(--gold2);
     }
 
     .highlight p{
@@ -545,7 +567,7 @@
 
     .highlight-price{
       font-size:2.4rem;
-      color:var(--green);
+      color:var(--gold2);
       font-weight:900;
       margin-bottom:10px;
     }
@@ -563,39 +585,42 @@
       border-radius:22px;
       padding:24px;
       box-shadow:var(--shadow);
-      position:relative;
     }
 
     .stars{
-      color:var(--gold);
+      color:var(--gold2);
       margin-bottom:12px;
       font-size:1.1rem;
     }
 
     .testimonial p{
-      color:#e9e9e9;
+      color:#ececec;
       margin-bottom:14px;
     }
 
     .testimonial strong{
-      color:var(--primary-2);
+      color:var(--gold2);
     }
 
     /* CTA */
     .cta{
       text-align:center;
       background:
-        linear-gradient(135deg, rgba(225,29,72,.18), rgba(255,77,109,.08)),
+        linear-gradient(135deg, rgba(212,175,55,.08), rgba(245,215,110,.04)),
         #111;
-      border:1px solid rgba(225,29,72,.18);
+      border:1px solid rgba(212,175,55,.18);
       border-radius:30px;
-      padding:50px 20px;
+      padding:55px 20px;
       box-shadow:var(--shadow);
     }
 
     .cta h2{
       font-size:clamp(2rem, 4vw, 3rem);
       margin-bottom:12px;
+    }
+
+    .cta h2 span{
+      color:var(--gold2);
     }
 
     .cta p{
@@ -631,11 +656,11 @@
 
     .footer-box h3{
       margin-bottom:10px;
-      color:var(--primary);
+      color:var(--gold2);
     }
 
     .footer-box p{
-      color:#cfcfcf;
+      color:#d4d4d4;
       font-size:.95rem;
       margin:4px 0;
     }
@@ -647,7 +672,7 @@
       font-size:.92rem;
     }
 
-    /* WHATS FLOAT */
+    /* WHATS */
     .whatsapp-float{
       position:fixed;
       right:18px;
@@ -679,7 +704,6 @@
       transform:translateY(0);
     }
 
-    /* ANIMATIONS */
     @keyframes fadeUp{
       from{
         opacity:0;
@@ -702,13 +726,12 @@
       to{ transform:translateX(-100%); }
     }
 
-    /* RESPONSIVO */
     @media (max-width: 980px){
       .highlight{
         grid-template-columns:1fr;
       }
 
-      .hero-stats{
+      .hero-features{
         grid-template-columns:1fr;
         max-width:100%;
       }
@@ -725,19 +748,15 @@
 
       .hero{
         min-height:auto;
-        padding:80px 0;
-      }
-
-      .countdown{
-        gap:10px;
-      }
-
-      .time-box{
-        min-width:80px;
+        padding:85px 0;
       }
 
       .section{
         padding:65px 0;
+      }
+
+      .logo-main{
+        font-size:1.7rem;
       }
     }
   </style>
@@ -747,18 +766,23 @@
   <!-- HEADER -->
   <header>
     <div class="container nav">
-      <div class="logo">MP <span>MODAS</span></div>
+      <div class="logo-wrap">
+        <div class="logo-icon">MP</div>
+        <div class="logo-text">
+          <div class="logo-main"><span>MP</span> MODAS</div>
+          <div class="logo-sub">Premium Menswear</div>
+        </div>
+      </div>
 
       <nav class="menu">
         <a href="#inicio">Início</a>
-        <a href="#beneficios">Benefícios</a>
-        <a href="#oferta">Oferta</a>
-        <a href="#produtos">Produtos</a>
+        <a href="#destaques">Destaques</a>
+        <a href="#colecao">Coleção</a>
         <a href="#clientes">Clientes</a>
         <a href="#contato">Contato</a>
       </nav>
 
-      <a class="btn btn-whats" href="https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Quero%20fazer%20um%20pedido." target="_blank">
+      <a class="btn btn-whats" href="https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Quero%20ver%20as%20camisas%20premium." target="_blank">
         WhatsApp
       </a>
     </div>
@@ -768,179 +792,153 @@
   <section class="hero" id="inicio">
     <div class="container">
       <div class="hero-content">
-        <div class="tag">🔥 Loja Premium • Atendimento Rápido • Qualidade Top</div>
-        <h1>Camisas de Time & <span>Tênis Premium</span> com estilo de loja forte</h1>
+        <div class="premium-tag">✨ Moda Masculina Premium • Elegância • Presença</div>
+
+        <div class="hero-brand">
+          <div class="hero-logo-box">MP</div>
+          <div class="hero-brand-text">
+            <h2><span>MP</span> MODAS</h2>
+            <p>Premium Menswear</p>
+          </div>
+        </div>
+
+        <h1>Camisas <span>Premium Masculinas</span> para quem quer presença e estilo</h1>
         <p>
-          A MP Modas foi feita pra quem quer andar no estilo. Camisas de clubes, seleções e tênis premium com visual top,
-          qualidade diferenciada e compra rápida direto no WhatsApp.
+          A MP Modas é uma loja pensada para homens que gostam de se vestir bem.
+          Camisas premium com visual elegante, ótimo acabamento e atendimento rápido direto no WhatsApp.
         </p>
 
         <div class="hero-actions">
-          <a href="#produtos" class="btn btn-primary">Ver Produtos</a>
-          <a href="https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Quero%20ver%20todos%20os%20modelos%20disponíveis." target="_blank" class="btn btn-whats">
+          <a href="#colecao" class="btn btn-gold">Ver Coleção</a>
+          <a href="https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Quero%20ver%20todos%20os%20modelos%20de%20camisas%20premium." target="_blank" class="btn btn-whats">
             Comprar no WhatsApp
           </a>
         </div>
 
-        <div class="hero-stats">
-          <div class="stat">
+        <div class="hero-features">
+          <div class="feature-box">
             <h3>Premium</h3>
-            <p>Peças com visual forte e ótimo acabamento</p>
+            <p>Camisas com visual sofisticado e acabamento diferenciado.</p>
           </div>
-          <div class="stat">
+          <div class="feature-box">
+            <h3>Elegância</h3>
+            <p>Modelos versáteis para presença, estilo e confiança.</p>
+          </div>
+          <div class="feature-box">
             <h3>Rápido</h3>
-            <p>Atendimento direto no WhatsApp sem enrolação</p>
-          </div>
-          <div class="stat">
-            <h3>Promoções</h3>
-            <p>Ofertas especiais e combos com desconto</p>
+            <p>Atendimento direto e sem enrolação no WhatsApp.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- BARRA DE OFERTA -->
-  <div class="offer-bar">
-    <div class="marquee">
-      🔥 PROMOÇÃO RELÂMPAGO NA MP MODAS • CAMISAS PREMIUM • TÊNIS PREMIUM • COMPRE 2 PEÇAS E CONSULTE DESCONTO EXCLUSIVO NO WHATSAPP • ATENDIMENTO RÁPIDO • 🔥
+  <!-- BARRA PREMIUM -->
+  <div class="luxury-bar">
+    <div class="luxury-text">
+      MP MODAS • CAMISAS PREMIUM MASCULINAS • ELEGÂNCIA • QUALIDADE • ESTILO • ATENDIMENTO RÁPIDO • LOJA PREMIUM •
     </div>
   </div>
 
   <!-- BENEFÍCIOS -->
-  <section class="section" id="beneficios">
+  <section class="section" id="destaques">
     <div class="container">
-      <h2 class="section-title reveal">Por que comprar na <span>MP Modas</span>?</h2>
+      <h2 class="section-title reveal">O estilo da <span>MP Modas</span></h2>
       <p class="section-subtitle reveal">
-        Loja focada em vender rápido, passar confiança e transformar visita em pedido no WhatsApp.
+        A proposta agora é posicionar sua marca como uma loja de roupa masculina premium, mais elegante e mais valorizada.
       </p>
 
       <div class="benefits">
         <div class="benefit-card reveal">
+          <div class="icon">👔</div>
+          <h3>Camisas Premium</h3>
+          <p>Peças com visual refinado, mais elegantes e com aparência de alto valor.</p>
+        </div>
+
+        <div class="benefit-card reveal">
+          <div class="icon">✨</div>
+          <h3>Presença e Estilo</h3>
+          <p>Moda masculina pensada para destacar postura, imagem e confiança.</p>
+        </div>
+
+        <div class="benefit-card reveal">
           <div class="icon">🏆</div>
-          <h3>Qualidade Premium</h3>
-          <p>Camisas e tênis com visual bonito, acabamento forte e estilo diferenciado.</p>
+          <h3>Qualidade Diferenciada</h3>
+          <p>Acabamento bonito, aparência premium e melhor percepção de valor.</p>
         </div>
 
         <div class="benefit-card reveal">
-          <div class="icon">⚡</div>
-          <h3>Atendimento Rápido</h3>
-          <p>Cliente chama no WhatsApp e já recebe resposta com modelos e valores.</p>
-        </div>
-
-        <div class="benefit-card reveal">
-          <div class="icon">🔥</div>
-          <h3>Produtos em Alta</h3>
-          <p>Peças que chamam atenção e vendem fácil: time, seleção e tênis estilosos.</p>
-        </div>
-
-        <div class="benefit-card reveal">
-          <div class="icon">💰</div>
-          <h3>Preço de Oportunidade</h3>
-          <p>Ótimo custo-benefício para vender bem e fechar mais pedidos.</p>
+          <div class="icon">💬</div>
+          <h3>Venda Direta</h3>
+          <p>Cliente vê, se interessa e já chama no WhatsApp para fechar rápido.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTADOR -->
-  <section class="section" id="oferta">
+  <!-- COLEÇÃO -->
+  <section class="section" id="colecao">
     <div class="container">
-      <div class="countdown-wrap reveal">
-        <h2 class="countdown-title">⏳ <span>OFERTA RELÂMPAGO</span> DA SEMANA</h2>
-        <p class="countdown-text">
-          Comprando 2 peças ou mais, consulte desconto especial e disponibilidade no WhatsApp antes que acabe.
-        </p>
-
-        <div class="countdown">
-          <div class="time-box">
-            <h3 id="days">00</h3>
-            <p>Dias</p>
-          </div>
-          <div class="time-box">
-            <h3 id="hours">00</h3>
-            <p>Horas</p>
-          </div>
-          <div class="time-box">
-            <h3 id="minutes">00</h3>
-            <p>Min</p>
-          </div>
-          <div class="time-box">
-            <h3 id="seconds">00</h3>
-            <p>Seg</p>
-          </div>
-        </div>
-
-        <a href="https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Quero%20aproveitar%20a%20oferta%20relâmpago." target="_blank" class="btn btn-whats">
-          Aproveitar Promoção
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRODUTOS -->
-  <section class="section" id="produtos">
-    <div class="container">
-      <h2 class="section-title reveal">Produtos em <span>Destaque</span></h2>
+      <h2 class="section-title reveal">Coleção de <span>Camisas Premium</span></h2>
       <p class="section-subtitle reveal">
-        Modelos prontos pra chamar atenção e gerar pedido rápido.
+        Aqui a sua loja fica com cara de marca de roupa premium de verdade.
       </p>
 
       <div class="products">
 
         <div class="product-card reveal">
-          <div class="badge">Mais vendido</div>
+          <div class="badge">Mais vendida</div>
           <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=900&q=80" alt="Camisa de Time Premium">
+            <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=900&q=80" alt="Camisa Social Premium">
           </div>
           <div class="product-info">
-            <h3>Camisa de Time Premium</h3>
-            <p>Modelos de clubes com estilo top, ótimo acabamento e visual forte.</p>
+            <h3>Camisa Social Premium</h3>
+            <p>Elegância, presença e acabamento sofisticado para um visual forte.</p>
             <div class="price-row">
-              <span class="old-price">R$ 119,90</span>
-              <span class="price">R$ 89,90</span>
+              <span class="old-price">R$ 149,90</span>
+              <span class="price">R$ 109,90</span>
             </div>
             <div class="product-actions">
-              <a class="mini-btn primary" href="https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Quero%20comprar%20uma%20Camisa%20de%20Time%20Premium." target="_blank">Comprar</a>
-              <a class="mini-btn whats" href="https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Quero%20ver%20mais%20modelos%20de%20camisa%20de%20time." target="_blank">Ver modelos</a>
+              <a class="mini-btn gold" href="https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Quero%20comprar%20a%20Camisa%20Social%20Premium." target="_blank">Comprar</a>
+              <a class="mini-btn whats" href="https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Quero%20ver%20mais%20camisas%20sociais." target="_blank">Ver modelos</a>
             </div>
           </div>
         </div>
 
         <div class="product-card reveal">
-          <div class="badge">Oferta quente</div>
+          <div class="badge">Elegância urbana</div>
           <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80" alt="Tênis Premium">
+            <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=900&q=80" alt="Camisa Casual Premium">
           </div>
           <div class="product-info">
-            <h3>Tênis Premium</h3>
-            <p>Visual moderno, presença forte e ótimo custo-benefício para quem gosta de estilo.</p>
+            <h3>Camisa Casual Premium</h3>
+            <p>Modelo moderno, estiloso e versátil para o dia a dia com presença.</p>
             <div class="price-row">
-              <span class="old-price">R$ 199,90</span>
-              <span class="price">R$ 149,90</span>
-            </div>
-            <div class="product-actions">
-              <a class="mini-btn primary" href="https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Quero%20comprar%20um%20Tênis%20Premium." target="_blank">Comprar</a>
-              <a class="mini-btn whats" href="https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Quero%20ver%20mais%20opções%20de%20tênis." target="_blank">Ver modelos</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card reveal">
-          <div class="badge">Alta procura</div>
-          <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80" alt="Camisa de Seleção Premium">
-          </div>
-          <div class="product-info">
-            <h3>Camisa de Seleção Premium</h3>
-            <p>Peças estilosas e muito procuradas por quem curte futebol e presença.</p>
-            <div class="price-row">
-              <span class="old-price">R$ 129,90</span>
+              <span class="old-price">R$ 139,90</span>
               <span class="price">R$ 99,90</span>
             </div>
             <div class="product-actions">
-              <a class="mini-btn primary" href="https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Quero%20comprar%20uma%20Camisa%20de%20Seleção%20Premium." target="_blank">Comprar</a>
-              <a class="mini-btn whats" href="https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Quero%20ver%20mais%20modelos%20de%20seleção." target="_blank">Ver modelos</a>
+              <a class="mini-btn gold" href="https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Quero%20comprar%20a%20Camisa%20Casual%20Premium." target="_blank">Comprar</a>
+              <a class="mini-btn whats" href="https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Quero%20ver%20mais%20camisas%20casuais." target="_blank">Ver modelos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="badge">Estilo premium</div>
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=900&q=80" alt="Camisa Slim Premium">
+          </div>
+          <div class="product-info">
+            <h3>Camisa Slim Premium</h3>
+            <p>Caimento mais elegante, aparência refinada e visual valorizado.</p>
+            <div class="price-row">
+              <span class="old-price">R$ 159,90</span>
+              <span class="price">R$ 119,90</span>
+            </div>
+            <div class="product-actions">
+              <a class="mini-btn gold" href="https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Quero%20comprar%20a%20Camisa%20Slim%20Premium." target="_blank">Comprar</a>
+              <a class="mini-btn whats" href="https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Quero%20ver%20mais%20camisas%20slim." target="_blank">Ver modelos</a>
             </div>
           </div>
         </div>
@@ -949,25 +947,26 @@
     </div>
   </section>
 
-  <!-- BANNER DE DESTAQUE -->
+  <!-- BANNER DE OFERTA -->
   <section class="section">
     <div class="container">
       <div class="highlight reveal">
         <div>
-          <h2>🔥 Combo especial: <span>2 peças com condição diferenciada</span></h2>
+          <h2>✨ Destaque especial: <span>camisas premium com visual de alto valor</span></h2>
           <p>
-            Ideal pra vender mais rápido. Cliente compra mais, você aumenta o ticket e fecha no WhatsApp com mais facilidade.
+            Essa nova identidade posiciona sua loja como marca mais elegante, mais séria e com percepção de valor maior.
+            Isso ajuda a vender melhor e cobrar mais.
           </p>
-          <a href="https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Quero%20fechar%20o%20combo%20de%202%20peças." target="_blank" class="btn btn-primary">
-            Quero o combo agora
+          <a href="https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Quero%20ver%20as%20ofertas%20das%20camisas%20premium." target="_blank" class="btn btn-gold">
+            Ver ofertas premium
           </a>
         </div>
 
         <div class="highlight-box">
-          <h3>Oferta especial no WhatsApp</h3>
-          <div class="highlight-price">2 PEÇAS</div>
-          <p style="color:#ddd; margin-bottom:16px;">Consulte desconto exclusivo e disponibilidade</p>
-          <a href="https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Quero%20consultar%20o%20desconto%20do%20combo." target="_blank" class="btn btn-whats">
+          <h3>Oferta da semana</h3>
+          <div class="highlight-price">2 CAMISAS</div>
+          <p style="color:#ddd; margin-bottom:16px;">Consulte condição especial no WhatsApp</p>
+          <a href="https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Quero%20consultar%20o%20combo%20de%202%20camisas." target="_blank" class="btn btn-whats">
             Consultar agora
           </a>
         </div>
@@ -978,27 +977,27 @@
   <!-- DEPOIMENTOS -->
   <section class="section" id="clientes">
     <div class="container">
-      <h2 class="section-title reveal">Clientes que <span>curtiram</span></h2>
+      <h2 class="section-title reveal">Clientes da <span>MP Modas</span></h2>
       <p class="section-subtitle reveal">
-        Depoimentos ajudam muito a gerar confiança e aumentar conversão.
+        Uma loja premium precisa passar confiança e valor visual.
       </p>
 
       <div class="testimonials">
         <div class="testimonial reveal">
           <div class="stars">★★★★★</div>
-          <p>"A camisa veio bonita demais, tecido top e caimento muito bom. Atendimento foi rápido."</p>
+          <p>"Camisa muito bonita, elegante e com acabamento excelente. Vestiu muito bem."</p>
           <strong>— Cliente satisfeito</strong>
         </div>
 
         <div class="testimonial reveal">
           <div class="stars">★★★★★</div>
-          <p>"Comprei no WhatsApp sem complicação. Respondeu rápido e mostrou vários modelos."</p>
+          <p>"Gostei muito da qualidade e do estilo. Atendimento rápido e prático no WhatsApp."</p>
           <strong>— Cliente satisfeito</strong>
         </div>
 
         <div class="testimonial reveal">
           <div class="stars">★★★★★</div>
-          <p>"Tênis bonito, acabamento forte e preço justo. Valeu muito a pena."</p>
+          <p>"Loja com visual bonito e produto com cara de peça premium de verdade."</p>
           <strong>— Cliente satisfeito</strong>
         </div>
       </div>
@@ -1009,17 +1008,18 @@
   <section class="section" id="contato">
     <div class="container">
       <div class="cta reveal">
-        <h2>Quer vender forte? Então deixa o cliente clicar e comprar rápido.</h2>
+        <h2>Vista sua marca com mais <span>elegância e valor</span></h2>
         <p>
-          Sua loja já está com cara premium. Agora é só divulgar o link e puxar todo mundo pro WhatsApp pra fechar pedido.
+          Agora a MP Modas está posicionada como uma loja de camisas premium masculinas.
+          Isso deixa sua marca mais forte, mais bonita e mais fácil de vender.
         </p>
 
         <a href="https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Quero%20fazer%20um%20pedido%20agora." target="_blank" class="btn btn-whats">
           Fazer pedido agora
         </a>
 
-        <a href="#produtos" class="btn btn-primary">
-          Ver catálogo
+        <a href="#colecao" class="btn btn-gold">
+          Ver coleção premium
         </a>
       </div>
     </div>
@@ -1031,7 +1031,7 @@
       <div class="footer-grid">
         <div class="footer-box">
           <h3>MP Modas</h3>
-          <p>Camisas de time, seleções e tênis com estilo, presença e qualidade.</p>
+          <p>Moda masculina premium com elegância, estilo e presença.</p>
         </div>
 
         <div class="footer-box">
@@ -1042,8 +1042,8 @@
 
         <div class="footer-box">
           <h3>Diferenciais</h3>
-          <p>🏆 Qualidade premium</p>
-          <p>🔥 Promoções especiais</p>
+          <p>👔 Camisas premium</p>
+          <p>✨ Visual elegante</p>
           <p>💬 Compra rápida no WhatsApp</p>
         </div>
       </div>
@@ -1054,39 +1054,12 @@
     </div>
   </footer>
 
-  <!-- WHATS FIXO -->
-  <a class="whatsapp-float" href="https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Quero%20fazer%20um%20pedido." target="_blank">
+  <!-- BOTÃO FIXO -->
+  <a class="whatsapp-float" href="https://wa.me/5524992407940?text=Olá%20MP%20Modas!%20Quero%20ver%20as%20camisas%20premium." target="_blank">
     WhatsApp
   </a>
 
   <script>
-    // CONTADOR DE 7 DIAS A PARTIR DE AGORA
-    const countdownDate = new Date().getTime() + (7 * 24 * 60 * 60 * 1000);
-
-    const timer = setInterval(function() {
-      const now = new Date().getTime();
-      const distance = countdownDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById("days").innerText = String(days).padStart(2, '0');
-      document.getElementById("hours").innerText = String(hours).padStart(2, '0');
-      document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
-      document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
-
-      if (distance < 0) {
-        clearInterval(timer);
-        document.getElementById("days").innerText = "00";
-        document.getElementById("hours").innerText = "00";
-        document.getElementById("minutes").innerText = "00";
-        document.getElementById("seconds").innerText = "00";
-      }
-    }, 1000);
-
-    // ANIMAÇÃO DE ENTRADA AO ROLAR
     const reveals = document.querySelectorAll('.reveal');
 
     function revealOnScroll() {
